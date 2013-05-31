@@ -33,6 +33,9 @@
 * **1** Ctrl+P abre o plugin ctrlp para buscar arquivos no sistema.
 * **2** F8 Abre comentarios de credito ( edite no arquivo .vimrc a seu modo )
 * **3** Alt + 1 à 0 ou Shift + F1 á F9 para transitar entre um buffer e outro.
+* **4** Ctrl + 77 ou gcc em modo normal para comentar uma linha ou visual para comentar várias.
+* **5** Em documento web, posicione o cursor do teclado sobre uma tag qualquer e veja onde ela fecha.
+* **5** Ainda em um documento web, se a tag estiver fechado longe, coloque o cursor do teclado sobre a tag e digite %
 
 
 
