@@ -16,7 +16,19 @@
 
 * **-** Outros: #software-livre ----> irc.freenode.net
 
+# Plugins pack #
 
+* Matchtag 
+* CtrlP
+* DelimitMate
+* Matchit
+* NerdTree
+* Snipmate
+* Supertab
+* Syntastic
+* tComment
+* Vim-powerline
+* ZenCoding
 
 # Instalação #
 
