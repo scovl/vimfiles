@@ -19,17 +19,17 @@
 
 # Plugins pack #
 
-* **0** Matchtag 
-* **1** CtrlP
-* **1** DelimitMate
-* **3** Matchit
-* **4** NerdTree
-* **5** Snipmate
-* **6** Supertab
-* **7** Syntastic
-* **8** tComment
-* **9** Vim-powerline
-* **10** ZenCoding
+* Matchtag 
+* CtrlP
+* DelimitMate
+* Matchit
+* NerdTree
+* Snipmate
+* Supertab
+* Syntastic
+* tComment
+* Vim-powerline
+* ZenCoding
 
 
 # Instalação #
