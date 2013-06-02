@@ -16,6 +16,7 @@
 
 * **-** Outros: #software-livre ----> irc.freenode.net
 
+
 # Plugins pack #
 
 * Matchtag 
@@ -30,14 +31,15 @@
 * Vim-powerline
 * ZenCoding
 
+
 # Instalação #
 
 * **0** git clone git@github.com:lobocode/myvim.git
 * **1** mv ~/myvim/.vim ~/ && sudo rm -R ~/myvim
-* **1** sudo mv ~/.vim/badwolf.vim /usr/share/vim/vim73/colors/
-* **2** sudo mv ~/.vim/.vimrc ~/
-* **3** Instale a fonte Monaco caso não a tenha
-* **4** Abra o vim ou Gvim
+* **2** sudo mv ~/.vim/badwolf.vim /usr/share/vim/vim73/colors/
+* **3** sudo mv ~/.vim/.vimrc ~/
+* **4** Instale a fonte Monaco caso não a tenha
+* **5** Abra o vim ou Gvim
 
 # Modo de usar #
 
@@ -47,4 +49,4 @@
 * **3** Alt + 1 à 0 ou Shift + F1 á F9 para transitar entre um buffer e outro.
 * **4** Ctrl + 77 ou gcc em modo normal para comentar uma linha ou visual para comentar várias.
 * **5** Em documento web, posicione o cursor do teclado sobre uma tag qualquer e veja onde ela fecha.
-* **5** Ainda em um documento web, se a tag estiver fechado longe, coloque o cursor do teclado sobre a tag e digite %
+* **6** Ainda em um documento web, se a tag estiver fechado longe, coloque o cursor do teclado sobre a tag e digite %
