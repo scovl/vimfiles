@@ -19,17 +19,17 @@
 
 # Plugins pack #
 
-* Matchtag 
-* CtrlP
-* DelimitMate
-* Matchit
-* NerdTree
-* Snipmate
-* Supertab
-* Syntastic
-* tComment
-* Vim-powerline
-* ZenCoding
+* Matchtag - Colore a tag HTML/WEB correspondente
+* CtrlP - Localiza arquivo
+* DelimitMate - Fecha automaticamente parentes, chaves, colchetes etc...
+* Matchit - Corrige o bug de navegação entre tag's web usando o %
+* NerdTree - Navegar entre arquivos
+* Snipmate - Snippet do textmate no VIM
+* Supertab - AutoCompletation
+* Syntastic - Mostra erros de sintaxe de diversas linguagens
+* tComment - Agiliza os comentários no código
+* Vim-powerline - Barra de modos do vim
+* ZenCoding - Plugin web.
 
 
 # Instalação #
