@@ -34,7 +34,7 @@
 
 # Instalação #
 
-* **0** git clone git@github.com:lobocode/myvim.git
+* **0** git clone git://github.com/lobocode/myvim.git
 * **1** mv ~/myvim/.vim ~/ && sudo rm -R ~/myvim
 * **2** sudo mv ~/.vim/badwolf.vim /usr/share/vim/vim73/colors/
 * **3** sudo mv ~/.vim/.vimrc ~/
