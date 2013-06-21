@@ -42,7 +42,7 @@
 * **5** cat > .gvimrc
 * **6** set guifont=Monaco\ Bold\ 10 
 * **7** ctrl + d para encerrar o cat
-* **5** Abra o vim ou Gvim
+* **8** Abra o vim ou Gvim
 
 # Modo de usar #
 
