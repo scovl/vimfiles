@@ -39,6 +39,9 @@
 * **2** sudo mv ~/.vim/badwolf.vim /usr/share/vim/vim73/colors/
 * **3** sudo mv ~/.vim/.vimrc ~/
 * **4** Instale a fonte Monaco caso não a tenha
+* **5** cat > .gvimrc
+* **6** set guifont=Monaco\ Bold\ 10 
+* **7** ctrl + d para encerrar o cat
 * **5** Abra o vim ou Gvim
 
 # Modo de usar #
