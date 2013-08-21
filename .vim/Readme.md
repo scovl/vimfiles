@@ -33,16 +33,16 @@
 
 
 # Instalação #
-
-* **0** git clone git://github.com/lobocode/myvim.git
-* **1** mv ~/myvim/.vim ~/ && sudo rm -R ~/myvim
-* **2** sudo mv ~/.vim/badwolf.vim /usr/share/vim/vim73/colors/
-* **3** sudo mv ~/.vim/.vimrc ~/
-* **4** Instale a fonte Monaco caso não a tenha
-* **5** cat > .gvimrc
-* **6** set guifont=Monaco\ Bold\ 10 
-* **7** ctrl + d para encerrar o cat
-* **8** Abra o vim ou Gvim
+* **0** Instale o gvim ou vim primeiro
+* **1** git clone git://github.com/lobocode/myvim.git
+* **2** mv ~/myvim/.vim ~/ && sudo rm -R ~/myvim
+* **3** sudo mv ~/.vim/badwolf.vim /usr/share/vim/vim74/colors/
+* **4** sudo mv ~/.vim/.vimrc ~/
+* **5** Instale a fonte Monaco caso não a tenha
+* **6** cat > .gvimrc
+* **7** set guifont=Monaco\ Bold\ 10 
+* **8** ctrl + d para encerrar o cat
+* **9** Abra o vim ou Gvim
 
 # Modo de usar #
 
