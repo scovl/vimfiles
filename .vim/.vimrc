@@ -7,6 +7,21 @@
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+"Destacar linha atual
+set cul
+
+" Fonte
+set guifont=Monaco\ Bold\ 11
+
+
+
+" Ignora maiúscula e minúscula em buscas
+set ic
+
+" Não salva arquivo de backup
+set nobackup
+
+
 
 " PERSONALIZANDO
 
@@ -18,6 +33,7 @@ set autochdir " Quando abrir um arquivo, permanecer no diretorio
 
 " Atalhos para plugins
 map <F5> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 
 " Vim power line
@@ -27,16 +43,15 @@ let g:Powerline_symbols = 'fancy'
 set t_Co=256
 
 
-set guifont=Monaco\ Bold\ 10
 
 " Tema
 
 colorscheme badwolf
 " colorscheme wombat
 
-
 "Pathogen
 call pathogen#infect()
+execute pathogen#infect('stuff/{}')
 
 " Enable syntax highlighting
 syntax enable
@@ -44,13 +59,10 @@ syntax enable
 " Habilita auto-indentação
 if has("autocmd")
  filetype plugin indent on
-  endif"")"
+endif"")"
 
 :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
-"set aw "salvamento automático - veja :help aw
-"set scs "ao fazer uma busca com maiúsculos considerar case sensitive
-set cul "abreviação de cursor line (destaca linha atual
 
 " Header Python
 map <F8> O# ------------------------------------------------<CR>
