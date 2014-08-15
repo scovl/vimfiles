@@ -12,7 +12,7 @@
 * **-** by vitorlobo
 * **-** http://vitorlobo.blogspot.com.br
 * **-** http://softwarelivre.org/lobocode
-* **-** E-mail: lobocode@openmailbox.org
+* **-** E-mail: lobocode@gmail.org
 
 * **-** Outros: #software-livre ----> irc.freenode.net
 
