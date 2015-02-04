@@ -1,4 +1,4 @@
-```python
+```
  __  __             _                              _    
 |  \/  |           (_)                            | |   
 | \  / |_   ___   ___ _ __ ___    _ __   __ _  ___| | __
@@ -10,7 +10,7 @@
 ```
 
 * **-** by vitorlobo
-* **-** http://vitorlobo.blogspot.com.br
+* **-** lobocode.github.io
 * **-** http://softwarelivre.org/lobocode
 * **-** E-mail: lobocode@gmail.org
 
@@ -29,6 +29,7 @@
 * tComment - Agiliza os comentários no código
 * Vim-powerline - Barra de modos do vim
 * ZenCoding - Plugin web.
+* Vim-Multiuser - Permite a edição colaborativa client/servidor
 
 
 # Instalação #
