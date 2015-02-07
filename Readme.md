@@ -31,6 +31,8 @@
 * ZenCoding - Plugin web.
 * Multiuser - Permite a edição colaborativa client/servidor
 * Fugitive - Gerenciamento de arquivos para o Git direto no vim
+* Tema do Syntax Highlight: Badwolf
+
 
 # Instalação #
 * **0** Instale o vim e o git
@@ -53,3 +55,5 @@
 * Vimbook em PT-BR: https://code.google.com/p/vimbook/
 * Fábio Akita Vim ScreenCast: http://goo.gl/r7CtaF
 * Curso de vim básico: http://aurelio.net/vim/
+* Screencasts: http://www.vimninjas.com/ , http://vimcasts.org/
+* Temas diversos para vim: http://vimcolors.com/ 
