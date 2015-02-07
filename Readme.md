@@ -33,13 +33,9 @@
 
 
 # Instalação #
-* **0** Instale o vim primeiro
-* **1** git clone git://github.com/lobocode/myvim.git
-* **2** mv ~/myvim/.vim ~/ && sudo rm -R ~/myvim
-* **3** sudo mv ~/.vim/badwolf.vim /usr/share/vim/vim74/colors/
-* **4** sudo mv ~/.vim/.vimrc ~/
-* **5** sudo mv ~/.vim/monaco.ttf /usr/share/fonts/
-
+* **0** Instale o vim e o git
+* **1** git clone git://github.com/lobocode/myvim.git em seu diretório home/
+* **2** Entre no diretório myvim e execute o script ./install com permissão root. Ou seja, sudo ./install 
 
 
 # Modo de usar #
