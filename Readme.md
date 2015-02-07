@@ -49,6 +49,7 @@
 * **6** Ainda em um documento web, se a tag estiver fechado longe, coloque o cursor do teclado sobre a tag e digite %
 
 # Referências #
-Vimbook em PT-BR: https://code.google.com/p/vimbook/
-Fábio Akita Vim ScreenCast: http://goo.gl/r7CtaF
-Curso de vim básico: http://aurelio.net/vim/
+
+* Vimbook em PT-BR: https://code.google.com/p/vimbook/
+* Fábio Akita Vim ScreenCast: http://goo.gl/r7CtaF
+* Curso de vim básico: http://aurelio.net/vim/
