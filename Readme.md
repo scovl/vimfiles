@@ -28,7 +28,7 @@
 * Syntastic - Mostra erros de sintaxe de diversas linguagens
 * tComment - Agiliza os comentários no código
 * Vim-powerline - Barra de modos do vim
-* ZenCoding - Plugin web.
+* Emmet - Fork melhorado do ZenCoding
 * Multiuser - Permite a edição colaborativa client/servidor
 * Fugitive - Gerenciamento de arquivos para o Git direto no vim
 * Tema do Syntax Highlight: Badwolf
