@@ -40,7 +40,7 @@
 
 # Instalação #
 * **0** Instale o vim e o git
-* **1** Em seu diretório /home/, git clone http://github.com/lobocode/myvim.git
+* **1** Em seu diretório /home/, git clone https://github.com/lobocode/myvim.git
 * **2** cd myvim
 * **3** chmod +x install
 * **4** su -c ./install
