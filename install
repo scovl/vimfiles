@@ -6,15 +6,15 @@
 
 if [[ ! $(whoami) = "root" ]]; then
 
-	echo "É necessário a permissão de super usuário (root) para instalação do vim mypack"
+        echo "É necessário a permissão de super usuário (root) para instalação do vim mypack"
 
 else
 
-	mv ~/myvim/.vim ~/ && sudo rm -R ~/myvim
-	mv ~/.vim/badwolf.vim /usr/share/vim/vim74/colors/
-	mv ~/.vim/.vimrc ~/
-	mv ~/.vim/monaco.ttf /usr/share/fonts/
+        mv /home/$USER/myvim/.vim /home/$USER/ && sudo rm -R /home/$USER/myvim
+        mv /home/$USER/.vim/badwolf.vim /usr/share/vim/vim74/colors/
+        mv /home/$USER/.vim/.vimrc /home/$USER/
+        mv /home/$USER/.vim/monaco.ttf /usr/share/fonts/
 
-	echo "Vim pack instalado com sucesso!"
+        echo "Vim pack instalado com sucesso!"
 fi
 
