@@ -10,7 +10,7 @@
 ```
 
 * **-** by vitorlobo
-* **-** lobocode.github.io
+* **-** http://lobocode.github.io/
 * **-** http://softwarelivre.org/lobocode
 * **-** E-mail: lobocode@gmail.org
 
@@ -40,7 +40,7 @@
 
 # Instalação #
 * **0** Instale o vim e o git
-* **1** git clone git://github.com/lobocode/myvim.git em seu diretório home/
+* **1** Em seu diretório /home/, git clone git://github.com/lobocode/myvim.git
 * **2** cd myvim
 * **3** chmod +x install
 * **4** su -c ./install
