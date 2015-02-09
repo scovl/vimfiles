@@ -14,6 +14,8 @@ set cul
 set guifont=Monaco\ Bold\ 11
 
 
+" Ativar o autocomente
+let g:neocomplcache_enable_at_startup = 1 
 
 " Ignora maiúscula e minúscula em buscas
 set ic
