@@ -41,7 +41,9 @@
 # Instalação #
 * **0** Instale o vim e o git
 * **1** git clone git://github.com/lobocode/myvim.git em seu diretório home/
-* **2** Entre no diretório myvim e execute o script ./install com permissão root. Ou seja, sudo ./install 
+* **2** cd myvim
+* **3** chmod +x install
+* **4** su -c ./install
 
 
 # Modo de usar #
