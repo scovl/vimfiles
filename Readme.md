@@ -31,7 +31,7 @@
 * Emmet - Fork melhorado do ZenCoding
 * Multiuser - Permite a edição colaborativa client/servidor
 * Fugitive - Gerenciamento de arquivos para o Git direto no vim
-* HTML5 - Autocomplete de tags html5
+* HTML5-Syntax - Autocomplete de tags html5
 * HTML5Validator - Se você executar o comando :HTML5Validate, ele inicia a validação dentro do próprio vim.
 * CSS3Syntax - Reconhece as novas propriedades do CSS3
 * SuperTAB - Autocomplete que sugere o TAB para tal.
