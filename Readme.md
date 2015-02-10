@@ -41,9 +41,11 @@
 Vim 7.4x e derivados ( vim-minimal, vim-tiny, gnome-vim, etc... )
 
 # Instalação # 
-* **0** Em seu diretório /home/, git clone https://github.com/lobocode/myvim.git
-* **1** cd myvim
-* **2** sudo ./install
+```shell
+$ git clone https://github.com/lobocode/myvim.git
+$ cd myvim
+$ sudo ./install                    
+```
  
 
 
