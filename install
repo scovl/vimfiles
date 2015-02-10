@@ -22,7 +22,7 @@ else
 	# caso seja rpm
 	if [[ "$questao" = "1" ]]; then
 		#redhat rpm
-		diretorio=/home/$USER/.vim/
+		diretorio=$HOME/.vim/
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
 		if ! rpm -qa | grep -qw vim-minimal && git ; then
@@ -35,18 +35,18 @@ else
 
 		if [ -d "$diretorio" ]; then
 
-			rm -r /home/$USER/.vim
+			rm -r $HOME/.vim
 
 		else
 
-			mkdir /home/$USER/.vim
+			mkdir $HOME/.vim
 
 		fi
 
-		mv /home/$USER/myvim/.vim /home/$USER/ && sudo rm -R /home/$USER/myvim
-		mv /home/$USER/.vim/badwolf.vim /usr/share/vim/vim74/colors/
-		mv /home/$USER/.vim/.vimrc /home/$USER/
-		mv /home/$USER/.vim/monaco.ttf /usr/share/fonts/
+		mv $HOME/myvim/.vim $HOME/ && sudo rm -R $HOME/myvim
+		mv $HOME/.vim/badwolf.vim /usr/share/vim/vim74/colors/
+		mv $HOME/.vim/.vimrc $HOME/
+		mv $HOME/.vim/monaco.ttf /usr/share/fonts/
 
 
 
@@ -56,28 +56,28 @@ else
 	if [[ "$questao" = "2" ]]; then
 		#debian deb
 
-		if  ! dpkg -s vim-minimal git ; then
+		if  ! dpkg -s vim && git ; then
 			#verificar se já está instalado
-			apt-get install vim-minimal git -y
+			apt-get install vim git -y
 
 
 		fi
 
 		if [ -d "$diretorio" ]; then
 
-			rm -r /home/$USER/.vim
+			rm -r $HOME/.vim
 
 		else
 
-			mkdir /home/$USER/.vim
+			mkdir $HOME/.vim
 
 		fi
 
 
-		mv /home/$USER/myvim/.vim /home/$USER/ && sudo rm -R /home/$USER/myvim
-		mv /home/$USER/.vim/badwolf.vim /usr/share/vim/vim74/colors/
-		mv /home/$USER/.vim/.vimrc /home/$USER/
-		mv /home/$USER/.vim/monaco.ttf /usr/share/fonts/
+		mv $HOME/myvim/.vim $HOME/ && sudo rm -R $HOME/myvim
+		mv $HOME/.vim/badwolf.vim /usr/share/vim/vim74/colors/
+		mv $HOME/.vim/.vimrc $HOME/
+		mv $HOME/.vim/monaco.ttf /usr/share/fonts/
 
 	fi
 
