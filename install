@@ -54,7 +54,7 @@ else
 	if [[ "$questao" = "2" ]]; then
 		#debian deb
 
-		if  ! dpkg -s vim && git ; then
+		if  ! dpkg-query -l vim git ; then
 			#verificar se já está instalado
 			apt-get install vim git -y
 
