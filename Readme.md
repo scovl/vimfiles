@@ -43,8 +43,8 @@
 * **1** Em seu diretório /home/, git clone https://github.com/lobocode/myvim.git
 * **2** cd myvim
 * **3** chmod +x install
-* **4** Caso o sistema seja baseado em RPM, use su -c ./install
-* **5** Caso seja baseado em DEB, use o sudo ./install 
+* **4** sudo ./install
+ 
 
 
 # Modo de usar #
