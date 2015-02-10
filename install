@@ -29,7 +29,8 @@ else
 
 		fi
 
-		
+		rm -r /home/$USER/.vim/
+		mkdir /home/$USER/.vim/	
 		mv /home/$USER/myvim/.vim /home/$USER/ && sudo rm -R /home/$USER/myvim
 		mv /home/$USER/.vim/badwolf.vim /usr/share/vim/vim74/colors/
 		mv /home/$USER/.vim/.vimrc /home/$USER/
