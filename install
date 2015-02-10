@@ -12,6 +12,7 @@ else
 
 
 	echo "O seu sistema é baseado em:
+	
 	1 - Redhat/rpm
 	2 - Debian/deb
 	"
