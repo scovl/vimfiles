@@ -34,11 +34,11 @@ else
 
 		if [ -d "$diretorio" ]; then
 			
-			rm -r /home/$USER/$diretorio
+			rm -r /home/$USER/.vim
 
 		else
 
-			mkdir /homem/$USER/$diretorio
+			mkdir /home/$USER/.vim
 
 		fi
 
