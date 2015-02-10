@@ -12,7 +12,7 @@ else
 
 
 	echo "O seu sistema é baseado em:
-	
+
 	1 - Redhat/rpm
 	2 - Debian/deb
 	"
@@ -34,7 +34,7 @@ else
 
 
 		if [ -d "$diretorio" ]; then
-			
+
 			rm -r /home/$USER/.vim
 
 		else
@@ -48,7 +48,7 @@ else
 		mv /home/$USER/.vim/.vimrc /home/$USER/
 		mv /home/$USER/.vim/monaco.ttf /usr/share/fonts/
 
-			
+
 
 	fi
 
@@ -62,6 +62,17 @@ else
 
 
 		fi
+
+		if [ -d "$diretorio" ]; then
+
+			rm -r /home/$USER/.vim
+
+		else
+
+			mkdir /home/$USER/.vim
+
+		fi
+
 
 		mv /home/$USER/myvim/.vim /home/$USER/ && sudo rm -R /home/$USER/myvim
 		mv /home/$USER/.vim/badwolf.vim /usr/share/vim/vim74/colors/
