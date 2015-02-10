@@ -37,8 +37,10 @@
 * SuperTAB - Autocomplete que sugere o TAB para tal.
 * Tema do Syntax Highlight: Badwolf
 
+# Requisitos #
+Vim 7.4x e derivados ( vim-minimal, vim-tiny, gnome-vim, etc... )
 
-# Instalação #
+# Instalação # 
 * **0** Instale o vim e o git
 * **1** Em seu diretório /home/, git clone https://github.com/lobocode/myvim.git
 * **2** cd myvim
