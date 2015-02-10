@@ -21,7 +21,7 @@ else
 	# caso seja rpm
 	if [[ "$questao" = "1" ]]; then
 		#redhat rpm
-		diretorio=.vim/
+		diretorio=/home/$USER/.vim/
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
 		if ! rpm -qa | grep -qw vim-minimal && git ; then
