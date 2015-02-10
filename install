@@ -18,6 +18,7 @@ else
 
 	echo "Digite o número correspondente a questão a cima:";read questao
 
+	echo "Aguarde enquanto instala e configura o VIM MYPACK - lobocode@gmail.com..."
 	# caso seja rpm
 	if [[ "$questao" = "1" ]]; then
 		#path do fedora/rpm/redhat
