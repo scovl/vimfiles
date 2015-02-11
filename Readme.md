@@ -37,7 +37,7 @@
 * SuperTAB - Autocomplete que sugere o TAB para tal.
 * Tema do Syntax Highlight: Badwolf
 
-# Instalação # 
+# Instalação 
 ```shell
 $ git clone https://github.com/lobocode/myvim.git
 $ cd myvim
