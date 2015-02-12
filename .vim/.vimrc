@@ -13,9 +13,12 @@ set cul
 " Fonte
 set guifont=Monaco\ Bold\ 11
 
+"css3 syntax
+augroup VimCSS3Syntax
+	autocmd!
 
-" Ativar o autocomente
-let g:neocomplcache_enable_at_startup = 1 
+	autocmd FileType css setlocal iskeyword+=-
+augroup END
 
 " Ignora maiúscula e minúscula em buscas
 set ic
