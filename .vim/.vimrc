@@ -83,7 +83,9 @@ endfu
 map <F9> :call CommOnOff()<cr>
 
 
-
+"Transitar entre tabs, abas
+map tk :tabnext
+map tj :tabprev
 
 
 " Trabalhando com Buffers
