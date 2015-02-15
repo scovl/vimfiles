@@ -15,6 +15,7 @@ else
 	
 	1 - Redhat/rpm
 	2 - Debian/deb
+	3 - Arch/pacman
 	"
 
 	echo "Digite o número correspondente a questão a cima:";read questao
@@ -86,6 +87,44 @@ else
 		mv $HOME/myvim/.vim $HOME/ && sudo rm -R $HOME/myvim
 		mv $HOME/.vim/badwolf.vim /usr/share/vim/vim*/colors/
 		mv $HOME/.vim/.vimrc $HOME/
+
+	fi
+
+	# caso seja pacman
+	if [[ "$questao" = "3" ]]; then
+	
+		# Forçando o modo root a interpretar o home
+		USER_HOME=$(eval echo ~${SUDO_USER})	
+	
+		#path do fedora/rpm/redhat
+		diretoriopac=${USER_HOME}/.vim/
+		
+
+
+		# verificar se já contém o vim e git instalado. Caso não, instalá.
+		if ! pacman -Qe | grep vim && git ; then
+
+			pacman S -y vim git
+
+		fi
+
+
+
+		if [ -d "$diretoriopac" ]; then
+
+			rm -r ${USER_HOME}/.vim
+
+		else
+
+			mkdir ${USER_HOME}/.vim
+
+		fi
+
+		mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && sudo rm -R ${USER_HOME}/myvim
+		mv ${USER_HOME}/.vim/badwolf.vim /usr/share/vim/vim*/colors/
+		mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
+		mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
+
 
 	fi
 
