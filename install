@@ -102,9 +102,9 @@ else
 
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
-		if ! pacman -Qe | grep vim && git ; then
+		if ! pacman -Qqe | grep vim git ; then
 
-			pacman S -y vim git
+			pacman -S vim git --noconfirm
 
 		fi
 
