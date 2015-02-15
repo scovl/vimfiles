@@ -27,7 +27,7 @@
 * Snipmate - Snippet do textmate no VIM
 * Syntastic - Mostra erros de sintaxe de diversas linguagens
 * tComment - Agiliza os comentários no código
-* Vim-powerline - Barra de modos do vim
+* Vim-airline - Barra de modos do vim. Substituto do powerline
 * Emmet - Fork melhorado do ZenCoding
 * Multiuser - Permite a edição colaborativa client/servidor
 * Fugitive - Gerenciamento de arquivos para o Git direto no vim
