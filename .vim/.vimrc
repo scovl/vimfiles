@@ -83,9 +83,12 @@ endfu
 map <F9> :call CommOnOff()<cr>
 
 
-"Transitar entre tabs, abas
-map tk :tabnext
-map tj :tabprev
+"Transitar entre tabs, abas, criar, fechar etc..
+nnoremap <C-Insert> :tabnew<CR>
+nnoremap <C-Delete> :tabclose<CR>
+
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
 
 
 " Trabalhando com Buffers
