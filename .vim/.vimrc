@@ -23,16 +23,21 @@ augroup END
 " Ignora maiúscula e minúscula em buscas
 set ic
 
-" Não salva arquivo de backup
-set nobackup
-
-
 
 " PERSONALIZANDO
 
 set number " setar numeros da coluna na vertical
 
-set nobackup " anular o backup
+" Backup na pasta /tmp ou outra qualquer.
+set backup
+set backupdir=/tmp
+set dir=/tmp
+
+"Arquivos ignorandos pelo vim
+set wildignore=*.o,*.obj,*.bak,*.exe,*.dll,*.com,*.class,*.au,*.wav,*.ps,\
+                 \*.avi,*.wmv,*.flv,*.djvu,*.pdf,*.chm,*.dvi,*.svn/,*~
+
+
 set autochdir " Quando abrir um arquivo, permanecer no diretorio
 
 
@@ -41,13 +46,8 @@ map <F5> :NERDTreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 
-" Vim power line
-set laststatus=2
-set encoding=utf-8
-let g:Powerline_symbols = 'fancy'
-set t_Co=256
-
-
+" Vim air-line substituto do powerline (mais leve)
+let g:airline#extensions#tabline#enabled = 1
 
 " Tema
 
@@ -68,13 +68,23 @@ endif"")"
 
 :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
+" Mostra a posição do cursor
+set ruler
 
-" Header Python
-map <F8> O# ------------------------------------------------<CR>
-\# Descrição do arquivo<CR>
-\# @author Vitor Lobo <lobocode@hotmail.com><cr>
-\# @created <esc>:r!date '+\%d/\%m/\%y'<cr>kJA<cr>
-\# ------------------------------------------------
+" Mostrar ou ocultar comentários com F9
+
+fu! CommOnOff()
+	if !exists('g:hiddcomm')
+		let g:hiddcomm=1 | hi Comment ctermfg=black guifg=black
+	else
+		unlet g:hiddcomm | hi Comment ctermfg=cyan  guifg=cyan term=bold
+	endif
+endfu
+map <F9> :call CommOnOff()<cr>
+
+
+
+
 
 " Trabalhando com Buffers
 map <A-1> :b1<cr>
