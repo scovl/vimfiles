@@ -102,7 +102,7 @@ else
 
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
-		if ! pacman -Qqe | grep vim git tmux ; then
+		if ! pacman -Qqe | grep vim && git && tmux ; then
 
 			pacman -S vim git tmux --noconfirm
 
