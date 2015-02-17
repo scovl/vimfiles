@@ -64,7 +64,7 @@ else
 
 		if  ! dpkg-query -l vim git tmux ack; then
 			#verificar se já está instalado
-			apt-get install vim git tmux ack -y
+			apt-get install vim git tmux ack-grep -y
 
 
 		fi
