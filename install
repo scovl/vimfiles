@@ -62,7 +62,7 @@ else
 	if [[ "$questao" = "2" ]]; then
 		#debian deb
 
-		if  ! dpkg-query -l vim git tmux ack; then
+		if  ! dpkg-query -l vim git tmux ack-grep; then
 			#verificar se já está instalado
 			apt-get install vim git tmux ack-grep -y
 
