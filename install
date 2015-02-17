@@ -33,7 +33,7 @@ else
 
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
-		if ! rpm -qa | grep -qw vim-minimal && git && tmux && Ack ; then
+		if ! rpm -qa | grep -qw vim-minimal && git && tmux && ack ; then
 
 			yum install -y vim-minimal git tmux ack
 
@@ -51,7 +51,7 @@ else
 
 		fi
 
-		mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && sudo rm -R ${USER_HOME}/myvim
+		mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/myvim
 		mv ${USER_HOME}/.vim/badwolf.vim /usr/share/vim/vim*/colors/
 		mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 		mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
@@ -84,7 +84,7 @@ else
 		fi
 
 
-		mv $HOME/myvim/.vim $HOME/ && sudo rm -R $HOME/myvim
+		mv $HOME/myvim/.vim $HOME/ && rm -R $HOME/myvim
 		mv $HOME/.vim/badwolf.vim /usr/share/vim/vim*/colors/
 		mv $HOME/.vim/.vimrc $HOME/
 
@@ -102,7 +102,7 @@ else
 
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
-		if ! pacman -Qqe | grep vim && git && tmux && ack ; then
+		if ! pacman -Qqe | grep vim git tmux ack ; then
 
 			pacman -S vim git tmux ack --noconfirm
 
@@ -120,7 +120,7 @@ else
 
 		fi
 
-		mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && sudo rm -R ${USER_HOME}/myvim
+		mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/myvim
 		mv ${USER_HOME}/.vim/badwolf.vim /usr/share/vim/vim*/colors/
 		mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 		mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
