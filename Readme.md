@@ -33,6 +33,7 @@
 * Fugitive - Gerenciamento de arquivos para o Git direto no vim
 * HTML5Validator - Se você executar o comando :HTML5Validate, ele inicia a validação dentro do próprio vim.
 * CSS3Syntax - Reconhece as novas propriedades do CSS3
+* Ack - Busca avançada de palavras ocorridas em módulos, arquivos etc...
 * Tema do Syntax Highlight: Badwolf
 
 # Instalação 
