@@ -34,6 +34,7 @@
 * HTML5Validator - Se você executar o comando :HTML5Validate, ele inicia a validação dentro do próprio vim.
 * CSS3Syntax - Reconhece as novas propriedades do CSS3
 * Ack - Busca avançada de palavras ocorridas em módulos, arquivos etc...
+* Preview - Abre arquivo html, markdown , arquivos de marcação no browser
 * Tema do Syntax Highlight: Badwolf
 
 # Instalação 
