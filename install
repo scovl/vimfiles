@@ -33,9 +33,9 @@ else
 
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
-		if ! rpm -qa | grep -qw vim-minimal && git && tmux && ack && ruby ; then
+		if ! rpm -qa | grep -qw vim-minimal && git && tmux && ack ; then
 
-			yum install -y vim-minimal git tmux ack ruby
+			yum install -y vim-minimal git tmux ack 
 
 		fi
 
@@ -62,9 +62,9 @@ else
 	if [[ "$questao" = "2" ]]; then
 		#debian deb
 
-		if  ! dpkg-query -l vim git tmux ack-grep ruby ; then
+		if  ! dpkg-query -l vim git tmux ack-grep ; then
 			#verificar se já está instalado
-			apt-get install vim git tmux ack-grep ruby -y
+			apt-get install vim git tmux ack-grep -y
 
 
 		fi
@@ -102,9 +102,9 @@ else
 
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
-		if ! pacman -Qqe | grep vim git tmux ack ruby; then
+		if ! pacman -Qqe | grep vim git tmux ack ; then
 
-			pacman -S vim git tmux ack ruby --noconfirm
+			pacman -S vim git tmux ack --noconfirm
 
 		fi
 
