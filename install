@@ -33,9 +33,9 @@ else
 
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
-		if ! rpm -qa | grep -qw vim-minimal && git && tmux && ack ; then
+		if ! rpm -qa | grep -qw vim-minimal && git && tmux && the_silver_searcher ; then
 
-			yum install -y vim-minimal git tmux ack 
+			yum install -y vim-minimal git tmux the_silver_searcher
 
 		fi
 
@@ -62,9 +62,9 @@ else
 	if [[ "$questao" = "2" ]]; then
 		#debian deb
 
-		if  ! dpkg-query -l vim git tmux ack-grep ; then
+		if  ! dpkg-query -l vim git tmux silversearcher-ag ; then
 			#verificar se já está instalado
-			apt-get install vim git tmux ack-grep -y
+			apt-get install vim git tmux silversearcher-ag -y
 
 
 		fi
@@ -102,9 +102,9 @@ else
 
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
-		if ! pacman -Qqe | grep vim git tmux ack ; then
+		if ! pacman -Qqe | grep vim git tmux the_silver_searcher ; then
 
-			pacman -S vim git tmux ack --noconfirm
+			pacman -S vim git tmux the_silver_searcher --noconfirm
 
 		fi
 

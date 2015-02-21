@@ -10,6 +10,10 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 "Destacar linha atual
 set cul
 
+"Adicionando o Ag
+let g:agprg="<custom-ag-path-goes-here> --column"
+
+
 " Fonte
 set guifont=Monaco\ Bold\ 11
 
