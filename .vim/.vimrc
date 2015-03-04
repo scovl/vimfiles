@@ -10,7 +10,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 "Destacar linha atual
 set cul
 
-
+" Auto refresh
+set autoread
 
 " Fonte
 set guifont=Monaco\ Bold\ 11
