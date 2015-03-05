@@ -36,6 +36,8 @@
 * Ack - Busca avançada de palavras ocorridas em módulos, arquivos etc...
 * Preview - Abre arquivo html, markdown , arquivos de marcação no browser
 * Tema do Syntax Highlight: Badwolf
+* vCoolor - Colore o código rgb, rgba, hls com a cor correspondente. Usar :VCoolor
+* SingleCompile - Compila e executa código em .c , .cpp com f10 e f9 só compila
 
 # Instalação 
 ```shell

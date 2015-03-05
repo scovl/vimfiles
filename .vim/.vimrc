@@ -13,6 +13,13 @@ set cul
 " Auto refresh
 set autoread
 
+
+" Compilar e executar código em C
+nmap <F9> :SCCompile<cr>
+nmap <F10> :SCCompileRun<cr>
+
+
+
 " Fonte
 set guifont=Monaco\ Bold\ 11
 
