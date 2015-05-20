@@ -5,6 +5,11 @@
 
 " 1 - CTRLP
 
+"PHP documentor ctrl + d
+au BufRead,BufNewFile *.php inoremap <buffer> <C-D> :call PhpDoc()<CR>
+au BufRead,BufNewFile *.php nnoremap <buffer> <C-D> :call PhpDoc()<CR>
+au BufRead,BufNewFile *.php vnoremap <buffer> <C-D> :call PhpDocRange()<CR>
+
 
 "Vim markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
@@ -106,6 +111,9 @@ nnoremap tj  :tabnext<CR>
 
 " Percorrer para a aba anterior
 nnoremap tk  :tabprev<CR>
+
+nnoremap <C-right> :5winc ><CR>
+nnoremap <C-left>  :5winc <<CR>
 
 " Trabalhando com Buffers
  
