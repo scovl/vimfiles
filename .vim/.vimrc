@@ -13,6 +13,16 @@ au BufRead,BufNewFile *.php vnoremap <buffer> <C-D> :call PhpDocRange()<CR>
 "Vim markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+" Configurações PHP Vim
+function! PhpSyntaxOverride()
+	hi! def link phpDocTags  phpDefine
+	hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+	autocmd!
+	autocmd FileType php call PhpSyntaxOverride()
+augroup END
 
 "ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
