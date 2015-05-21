@@ -1,5 +1,34 @@
  " Meu VIM RC
 
+" encoding
+set encoding=utf-8
+
+" Usa as definições do vim, não as do vi
+set nocompatible
+
+" Habilita o uso do mouse no vim para cliques e coisas do tipo
+set mouse=a
+
+" Permite a navegação dentro de uma mesma linha longa com j e k
+set wrap
+
+" Autocomplete
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
+" lembra a ultima linha editada em um arquivo
+function! ResCur()
+	if line("'\") <= line("$")
+		normal! g`"
+		return 1
+	endif
+endfunction
+
+augroup resCur
+	autocmd!
+	autocmd BufWinEnter * call ResCur()
+augroup END
+
 
 " PLUGINS
 
