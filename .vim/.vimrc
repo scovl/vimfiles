@@ -3,7 +3,6 @@
 
 " PLUGINS
 
-" 1 - CTRLP
 
 "PHP documentor ctrl + d
 au BufRead,BufNewFile *.php inoremap <buffer> <C-D> :call PhpDoc()<CR>
@@ -14,7 +13,13 @@ au BufRead,BufNewFile *.php vnoremap <buffer> <C-D> :call PhpDocRange()<CR>
 "Vim markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+
+"ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_working_path_mode = 'ra'
+
+
 
 "Destacar linha atual
 set cul
@@ -54,6 +59,17 @@ set dir=/tmp
 set wildignore=*.o,*.obj,*.bak,*.exe,*.dll,*.com,*.class,*.au,*.wav,*.ps,\
                  \*.avi,*.wmv,*.flv,*.djvu,*.pdf,*.chm,*.dvi,*.svn/,*~
 
+
+"Configurações do undo
+set history=1000
+set undolevels=1000
+set title
+set visualbell
+set noerrorbells
+set nobackup
+set noswapfile
+
+
 " Quando abrir um arquivo, permanecer no diretorio
 set autochdir 
 
@@ -64,11 +80,16 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Vim air-line substituto do powerline (mais leve)
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+set laststatus=2
+
 
 " Tema do syntax highlight
 
 colorscheme badwolf
-" colorscheme wombat
+"leg g:molokai_original = 1
+"colorscheme molokai
+"colorscheme wombat
 
 "Pathogen
 call pathogen#infect()

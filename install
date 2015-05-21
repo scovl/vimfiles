@@ -45,16 +45,17 @@ else
 
 			rm -r ${USER_HOME}/.vim
 
-		else
+			else
 
-			mkdir ${USER_HOME}/.vim
+				mkdir ${USER_HOME}/.vim
 
-		fi
+			fi
 
-		mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/myvim
-		mv ${USER_HOME}/.vim/badwolf.vim /usr/share/vim/vim*/colors/
-		mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
-		mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
+			mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/myvim
+			mv ${USER_HOME}/.vim/badwolf.vim /usr/share/vim/vim*/colors/
+			mv ${USER_HOME}/.vim/molokai.vim /usr/share/vim/vim*/colors/
+			mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
+			mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
 
 
 	fi
@@ -85,6 +86,7 @@ else
 
 
 		mv $HOME/myvim/.vim $HOME/ && rm -R $HOME/myvim
+		mv $HOME/.vim/molokai.vim /usr/share/vim/vim*/colors/
 		mv $HOME/.vim/badwolf.vim /usr/share/vim/vim*/colors/
 		mv $HOME/.vim/.vimrc $HOME/
 
@@ -122,6 +124,7 @@ else
 
 		mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/myvim
 		mv ${USER_HOME}/.vim/badwolf.vim /usr/share/vim/vim*/colors/
+		mv ${USER_HOME}/.vim/molokai.vim /usr/share/vim/vim*/colors/
 		mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 		mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
 
