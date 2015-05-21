@@ -51,7 +51,7 @@ else
 
 			fi
 
-			mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ 
+			mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/myvim
 			mv ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
 			mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 			mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
