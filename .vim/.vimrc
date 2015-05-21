@@ -16,20 +16,6 @@ set wrap
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 
-" lembra a ultima linha editada em um arquivo
-function! ResCur()
-	if line("'\") <= line("$")
-		normal! g`"
-		return 1
-	endif
-endfunction
-
-augroup resCur
-	autocmd!
-	autocmd BufWinEnter * call ResCur()
-augroup END
-
-
 " PLUGINS
 
 
