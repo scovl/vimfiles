@@ -55,9 +55,8 @@ else
 			mv ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
 			mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 			mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
-			cd ${USER_HOME}/.vim/bundle/YouCompleteMe
-		   	git submodule update --init --recursive
-		   	./install.sh --clang-completer
+			cd ${USER_HOME}/.vim/bundle/ && https://github.com/Valloric/YouCompleteMe
+			cd ${USER_HOME}/.vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.sh --clang-completer
 			cd ${USER_HOME}	
 
 
