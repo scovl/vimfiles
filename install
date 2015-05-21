@@ -35,7 +35,7 @@ else
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
 		if ! rpm -qa | grep -qw vim-minimal && git && tmux && ack ; then
 
-			yum install -y vim-minimal git tmux ack
+			yum install -y vim-minimal git tmux ack cmake
 
 		fi
 
@@ -52,10 +52,11 @@ else
 			fi
 
 			mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/myvim
-			mv ${USER_HOME}/.vim/badwolf.vim /usr/share/vim/vim*/colors/
-			mv ${USER_HOME}/.vim/molokai.vim /usr/share/vim/vim*/colors/
+			mv ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
 			mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 			mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
+			cd ${USER_HOME}/.vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.sh --clang-completer
+			cd ${USER_HOME}	
 
 
 	fi
@@ -65,7 +66,7 @@ else
 
 		if  ! dpkg-query -l vim git tmux ack-grep ; then
 			#verificar se já está instalado
-			apt-get install vim git tmux ack-grep -y
+			apt-get install vim git tmux ack-grep cmake -y
 
 
 		fi
@@ -86,8 +87,7 @@ else
 
 
 		mv $HOME/myvim/.vim $HOME/ && rm -R $HOME/myvim
-		mv $HOME/.vim/molokai.vim /usr/share/vim/vim*/colors/
-		mv $HOME/.vim/badwolf.vim /usr/share/vim/vim*/colors/
+		mv $HOME/.vim/*.vim /usr/share/vim/vim*/colors/
 		mv $HOME/.vim/.vimrc $HOME/
 
 	fi
@@ -106,7 +106,7 @@ else
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
 		if ! pacman -Qqe | grep vim git tmux ack ; then
 
-			pacman -S vim git tmux ack --noconfirm
+			pacman -S vim git tmux ack cmake --noconfirm
 
 		fi
 
@@ -123,8 +123,7 @@ else
 		fi
 
 		mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/myvim
-		mv ${USER_HOME}/.vim/badwolf.vim /usr/share/vim/vim*/colors/
-		mv ${USER_HOME}/.vim/molokai.vim /usr/share/vim/vim*/colors/
+		mv ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
 		mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 		mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
 
