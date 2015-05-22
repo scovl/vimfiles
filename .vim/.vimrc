@@ -12,9 +12,8 @@ set mouse=a
 " Permite a navegação dentro de uma mesma linha longa com j e k
 set wrap
 
-" Autocomplete
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
+" Omni autocomplete 
+let g:neocomplcache_enable_at_startup = 1
 
 " PLUGINS
 

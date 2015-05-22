@@ -59,9 +59,7 @@ else
 			echo "Clonando e instalando YouCompleteMe"
 			echo "Aguarde, este procedimento poderá demorar..."
 			
-			cd ${USER_HOME}/.vim/bundle/ && git clone https://github.com/Valloric/YouCompleteMe
-			cd ${USER_HOME}/.vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.sh --clang-completer
-			cd ${USER_HOME}	
+			cd ${USER_HOME}/.vim/bundle/ && git clone https://github.com/Shougo/neocomplcache.vim 
 
 
 	fi
