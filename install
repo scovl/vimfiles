@@ -56,8 +56,8 @@ else
 			mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 			mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
 
-			echo "Clonando e instalando o Neocomlcache"
-			echo "Aguarde, este procedimento poderá demorar..."
+			echo "\nClonando e instalando o Neocomlcache"
+			echo "Aguarde, este procedimento poderá demorar...\n"
 			
 			cd ${USER_HOME}/.vim/bundle/ && git clone https://github.com/Shougo/neocomplcache.vim 
 

@@ -23,7 +23,12 @@ let g:syntastic_enable_signs = 0
 
 " Omni autocomplete 
 
+set completeopt-=preview
+
 let g:neocomplcache_enable_at_startup = 1
+
+map <F3> :NeoComplCacheToggle<CR>
+
 let g:neocomplcache_enable_ignore_case = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_auto_select = 1
@@ -35,6 +40,7 @@ let g:neocomplcache_auto_completion_start_length = 1
 let g:neocomplcache_manual_completion_start_length = 1
 let g:neocomplcache_min_keyword_length = 1
 let g:neocomplcache_min_syntax_length = 1
+
 " complete with workds from any opened file
 let g:neocomplcache_same_filetype_lists = {}
 let g:neocomplcache_same_filetype_lists._ = '_'
@@ -62,8 +68,9 @@ augroup END
 
 "ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+
 
 
 
@@ -128,8 +135,8 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 
 
-" Tasklist show pending tasks list
-map <F2> :TaskList<CR>
+" Taskbar
+nmap <F2> :TagbarToggle<CR>
 
 
 
