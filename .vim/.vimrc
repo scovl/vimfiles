@@ -1,5 +1,8 @@
  " Meu VIM RC
 
+" Nao compativel com o vim 
+set nocompatible
+
 " encoding
 set encoding=utf-8
 
@@ -12,10 +15,29 @@ set mouse=a
 " Permite a navegação dentro de uma mesma linha longa com j e k
 set wrap
 
-" Omni autocomplete 
-let g:neocomplcache_enable_at_startup = 1
 
-" PLUGINS
+"Syntastic 
+nmap <leader>e :Errors<CR>
+let g:syntastic_check_on_open = 1
+let g:syntastic_enable_signs = 0
+
+" Omni autocomplete 
+
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_ignore_case = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_auto_select = 1
+let g:neocomplcache_enable_fuzzy_completion = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_fuzzy_completion_start_length = 1
+let g:neocomplcache_auto_completion_start_length = 1
+let g:neocomplcache_manual_completion_start_length = 1
+let g:neocomplcache_min_keyword_length = 1
+let g:neocomplcache_min_syntax_length = 1
+" complete with workds from any opened file
+let g:neocomplcache_same_filetype_lists = {}
+let g:neocomplcache_same_filetype_lists._ = '_'
 
 
 "PHP documentor ctrl + d
@@ -102,6 +124,15 @@ map <F5> :NERDTreeToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 
+"Nerdtree ignore 
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+
+
+" Tasklist show pending tasks list
+map <F2> :TaskList<CR>
+
+
+
 " Vim air-line substituto do powerline (mais leve)
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -145,17 +176,17 @@ map <F9> :call CommOnOff()<cr>
 
 "Transitar entre tabs, abas, criar, fechar etc..
 
-"Nova aba
-nnoremap tn :tabnew<CR>
+"Próxima aba
+nnoremap tn :tabnext<CR>
 
-"Fechar aba
-nnoremap tc :tabclose<CR>
+"Aba anterior
+nnoremap tp :tabprev<CR>
 
-" Percorrer para a próxima aba
-nnoremap tj  :tabnext<CR>
+"Criar uma aba
+nnoremap tt  :tabnew<CR>
 
-" Percorrer para a aba anterior
-nnoremap tk  :tabprev<CR>
+"Partir o módulo em outra aba
+nnoremap ts  :tab split<CR>
 
 nnoremap <C-right> :5winc ><CR>
 nnoremap <C-left>  :5winc <<CR>
