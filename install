@@ -56,7 +56,7 @@ else
 			mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 			mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
 
-			echo "Clonando e instalando YouCompleteMe"
+			echo "Clonando e instalando o Neocomlcache"
 			echo "Aguarde, este procedimento poderá demorar..."
 			
 			cd ${USER_HOME}/.vim/bundle/ && git clone https://github.com/Shougo/neocomplcache.vim 
