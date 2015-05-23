@@ -200,6 +200,10 @@ nnoremap tt  :tabnew<CR>
 "Partir o módulo em outra aba
 nnoremap ts  :tab split<CR>
 
+"Buffer Next and Previous
+nnoremap bp :bprevious<CR>
+nnoremap bn :bnext<CR>
+
 nnoremap <C-right> :5winc ><CR>
 nnoremap <C-left>  :5winc <<CR>
 
