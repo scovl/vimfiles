@@ -35,7 +35,7 @@ else
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
 		if ! rpm -qa | grep -qw vim-minimal && git && tmux && ack ; then
 
-			yum install -y vim-minimal git tmux ack cmake
+			yum install -y vim-minimal git tmux ack ctags
 
 		fi
 

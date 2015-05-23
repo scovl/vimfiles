@@ -27,7 +27,12 @@ set completeopt-=preview
 
 let g:neocomplcache_enable_at_startup = 1
 
+
+" Neocomplcachetoggle lock e unlock
 map <F3> :NeoComplCacheToggle<CR>
+
+" Ctags recursive database
+map <F4> :!ctags -R .<CR>
 
 let g:neocomplcache_enable_ignore_case = 1
 let g:neocomplcache_enable_smart_case = 1
