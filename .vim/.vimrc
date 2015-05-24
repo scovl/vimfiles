@@ -207,7 +207,9 @@ nnoremap bn :bnext<CR>
 nnoremap <C-right> :5winc ><CR>
 nnoremap <C-left>  :5winc <<CR>
 
-" Trabalhando com Buffers
+" Fugitive
+map ,gs :Gstatus<CR>
+map ,gw :Gwrite<CR>
  
  "Html auto complete
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
