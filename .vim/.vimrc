@@ -32,7 +32,7 @@ let g:neocomplcache_enable_at_startup = 1
 map <F3> :NeoComplCacheToggle<CR>
 
 " Ctags recursive database
-map <F4> :!ctags -R .<CR>
+map <F4> :CtrlPTag<CR>
 
 let g:neocomplcache_enable_ignore_case = 1
 let g:neocomplcache_enable_smart_case = 1
@@ -210,7 +210,8 @@ nnoremap <C-left>  :5winc <<CR>
 " Fugitive
 map ,gs :Gstatus<CR>
 map ,gw :Gwrite<CR>
- 
+
+
  "Html auto complete
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
