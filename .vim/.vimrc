@@ -15,6 +15,8 @@ set mouse=a
 " Permite a navegação dentro de uma mesma linha longa com j e k
 set wrap
 
+" Cola textos, códigos sem bug de indetação
+set paste
 
 "Syntastic 
 nmap <leader>e :Errors<CR>
