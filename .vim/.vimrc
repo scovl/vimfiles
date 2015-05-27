@@ -32,7 +32,7 @@ map <F4> :CtrlPTag<CR>
 
 set completeopt-=preview
 
-let g:neocomplcache_enable_at_startup = 
+let g:neocomplcache_enable_at_startup = 1 
 
 " Neocomplcachetoggle lock e unlock
 map <F3> :NeoComplCacheToggle<CR>
