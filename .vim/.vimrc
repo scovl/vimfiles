@@ -16,7 +16,7 @@ set mouse=a
 set wrap
 
 " Cola textos, códigos sem bug de indetação
-set paste
+map <F6> :set paste!<CR>
 
 "Syntastic 
 nmap <leader>e :Errors<CR>
