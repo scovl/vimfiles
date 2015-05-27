@@ -23,18 +23,19 @@ nmap <leader>e :Errors<CR>
 let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs = 0
 
+1
+
+" Ctags recursive database
+map <F4> :CtrlPTag<CR>
+
 " Omni autocomplete 
 
 set completeopt-=preview
 
-let g:neocomplcache_enable_at_startup = 1
-
+let g:neocomplcache_enable_at_startup = 
 
 " Neocomplcachetoggle lock e unlock
 map <F3> :NeoComplCacheToggle<CR>
-
-" Ctags recursive database
-map <F4> :CtrlPTag<CR>
 
 let g:neocomplcache_enable_ignore_case = 1
 let g:neocomplcache_enable_smart_case = 1
