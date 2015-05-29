@@ -156,7 +156,10 @@ set laststatus=2
 
 " Tema do syntax highlight
 
-colorscheme badwolf
+
+colorscheme gruvbox
+set background=dark
+" colorscheme badwolf
 "leg g:molokai_original = 1
 "colorscheme molokai
 "colorscheme wombat
