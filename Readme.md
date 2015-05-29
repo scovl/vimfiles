@@ -16,6 +16,8 @@
 
 * **-** Outros: #software-livre ----> irc.freenode.net
 
+<img src="https://raw.githubusercontent.com/lobocode/myvim/master/myvim.png" />
+</p>
 
 # Plugins pack #
 
