@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script de instalação do myvim Pack by Vitor Lobo
+# Script de instalação do vimfiles Pack by Vitor Lobo
 
 # Pedindo acesso root para instalação do vim mypack
 
@@ -51,7 +51,7 @@ else
 
 			fi
 
-			mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/myvim
+			mv ${USER_HOME}/vimfiles/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/vimfiles
 			mv ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
 			mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 			mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
@@ -89,7 +89,7 @@ else
 		fi
 
 
-		mv $HOME/myvim/.vim $HOME/ && rm -R $HOME/myvim
+		mv $HOME/vimfiles/.vim $HOME/ && rm -R $HOME/vimfiles
 		mv $HOME/.vim/*.vim /usr/share/vim/vim*/colors/
 		mv $HOME/.vim/.vimrc $HOME/
 
@@ -125,7 +125,7 @@ else
 
 		fi
 
-		mv ${USER_HOME}/myvim/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/myvim
+		mv ${USER_HOME}/vimfiles/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/vimfiles
 		mv ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
 		mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 		mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/

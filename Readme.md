@@ -1,12 +1,11 @@
 ```
- __  __             _                              _    
-|  \/  |           (_)                            | |   
-| \  / |_   ___   ___ _ __ ___    _ __   __ _  ___| | __
-| |\/| | | | \ \ / / | '_ ` _ \  | '_ \ / _` |/ __| |/ /
-| |  | | |_| |\ V /| | | | | | | | |_) | (_| | (__|   < 
-|_|  |_|\__, | \_/ |_|_| |_| |_| | .__/ \__,_|\___|_|\_\
-         __/ |                   | |                    
-        |___/                    |_|                    
+       _            __ _ _           
+      (_)          / _(_) |          
+__   ___ _ __ ___ | |_ _| | ___  ___ 
+\ \ / / | '_ ` _ \|  _| | |/ _ \/ __|
+ \ V /| | | | | | | | | | |  __/\__ \
+  \_/ |_|_| |_| |_|_| |_|_|\___||___/
+
 ```
 
 * **-** by vitorlobo
@@ -16,7 +15,7 @@
 
 * **-** Outros: #software-livre ----> irc.freenode.net
 
-<img src="https://raw.githubusercontent.com/lobocode/myvim/master/myvim.png" />
+<img src="https://raw.githubusercontent.com/lobocode/vimfiles/master/vimfiles.png" />
 </p>
 
 # Plugins pack #
@@ -42,8 +41,8 @@
 
 # Instalação 
 ```shell
-$ git clone https://github.com/lobocode/myvim.git
-$ cd myvim
+$ git clone https://github.com/lobocode/vimfiles.git
+$ cd vimfiles
 $ sudo ./install                    
 ```
  
