@@ -38,6 +38,10 @@ __   ___ _ __ ___ | |_ _| | ___  ___
 * Preview - Abre arquivo html, markdown , arquivos de marcação no browser
 * Tema do Syntax Highlight: Badwolf
 * SingleCompile - Compila e executa código em .c , .cpp com f10 e f9 só compila
+* Vim-Preview - Preview de páginas web com <leader>P ou seja, \P maiúsculo 
+* Tagbar - Barra lateral Explorer
+* Vim-Rails plugin para desenvolvimento ruby on rails
+* Vim-Pasta ajustar indentação quando por algum motivo estiver errada
 
 # Instalação 
 ```shell
