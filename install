@@ -59,7 +59,7 @@ else
 			echo "\nClonando e instalando o Neocomlcache"
 			echo "Aguarde, este procedimento poderá demorar...\n"
 			
-			cd ${USER_HOME}/.vim/bundle/ && git clone https://github.com/Shougo/neocomplcache.vim 
+			cd ${USER_HOME}/.vim/bundle/ && git clone https://github.com/Shougo/neocomplete.vim 
 
 
 	fi
