@@ -32,13 +32,16 @@ map <F4> :CtrlPTag<CR>
 
 set completeopt-=preview
 
-" Neocomplcachetoggle lock e unlock
+" Neocomplete lock e unlock
 map <F3> :NeoCompleteToggle<CR>
 
 " Use neocomplete.
 
-let g:neocomplete#enable_at_startup = 0
+let g:neocomplete#enable_at_startup = 1
 
+" Delay para o neocomplete
+let g:neocomplete#enable_cursor_hold_i = 1
+let g:neocomplete#cursor_hold_i_time = 1000 " in msec
 
 "PHP documentor ctrl + d
 au BufRead,BufNewFile *.php inoremap <buffer> <C-D> :call PhpDoc()<CR>
