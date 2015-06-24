@@ -23,7 +23,7 @@ nmap <leader>e :Errors<CR>
 let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs = 0
 
-1
+
 
 " Ctags recursive database
 map <F4> :CtrlPTag<CR>
@@ -37,11 +37,22 @@ map <F3> :NeoCompleteToggle<CR>
 
 " Use neocomplete.
 
-let g:neocomplete#enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 1
+
+"CamelCase autocomplete
+let g:neocomplcache_enable_camel_case_completion = 1
+"Underline completion
+let g:neocomplcache_enable_underbar_completion = 1
 
 " Delay para o neocomplete
-let g:neocomplete#enable_cursor_hold_i = 1
-let g:neocomplete#cursor_hold_i_time = 1000 " in msec
+" let g:neocomplcache_cursor_hold_i_time=100
+let g:neocomplcache_enable_insert_char_pre = 1
+
+"Desabilitar setar nos popups
+inoremap <expr><Left>  neocomplcache#close_popup() . "\<Left>"
+inoremap <expr><Right> neocomplcache#close_popup() . "\<Right>"
+inoremap <expr><Up>    neocomplcache#close_popup() . "\<Up>"
+inoremap <expr><Down>  neocomplcache#close_popup() . "\<Down>"
 
 "PHP documentor ctrl + d
 au BufRead,BufNewFile *.php inoremap <buffer> <C-D> :call PhpDoc()<CR>
