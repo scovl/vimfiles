@@ -55,7 +55,7 @@ else
 			mv ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
 			mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 			mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
-
+			rm -R ${USER_HOME}/vimfiles
 			echo -e "\nClonando e instalando o Neocomlcache"
 			echo -e "Aguarde, este procedimento poderá demorar...\n"
 			
