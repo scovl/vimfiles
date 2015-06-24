@@ -46,7 +46,7 @@ let g:neocomplcache_enable_underbar_completion = 1
 
 " Delay para o neocomplete
 " let g:neocomplcache_cursor_hold_i_time=100
-let g:neocomplcache_enable_insert_char_pre = 1
+" let g:neocomplcache_enable_insert_char_pre = 1
 
 "Desabilitar setar nos popups
 inoremap <expr><Left>  neocomplcache#close_popup() . "\<Left>"
