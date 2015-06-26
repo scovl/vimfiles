@@ -33,9 +33,9 @@ else
 
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
-		if ! rpm -qa | grep -qw vim-enhanced && git && tmux && ack ; then
+		if ! rpm -qa | grep -qw vim-enhanced && git && tmux && ack && ctags ; then
 
-			yum install -y vim-enhanced git tmux ack 
+			yum install -y vim-enhanced git tmux ack ctags
 
 		fi
 
