@@ -33,7 +33,7 @@ map <F4> :CtrlPTag<CR>
 set completeopt-=preview
 
 " Neocomplete lock e unlock
-map <F3> :NeoCompleteToggle<CR>
+map <F3> :neocomplcacheToggle<CR>
 
 " Use neocomplete.
 
