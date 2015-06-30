@@ -1,0 +1,139 @@
+#!/bin/bash
+
+# Script de instalação do vimfiles Pack by Vitor Lobo
+
+# Pedindo acesso root para instalação do vim mypack
+
+if [[ ! $(whoami) = "root" ]]; then
+
+	echo "É necessário a permissão de super usuário (root) para instalação do vim mypack"
+
+else
+
+
+	echo "O seu sistema é baseado em:
+	
+	1 - Redhat/rpm
+	2 - Debian/deb
+	3 - Arch/pacman
+	"
+
+	echo "Digite o número correspondente a questão a cima:";read questao
+
+	echo "Aguarde enquanto instala e configura o VIM by Vitor Lobo..."
+	# caso seja rpm
+	if [[ "$questao" = "1" ]]; then
+	
+		# Forçando o modo root a interpretar o home
+		USER_HOME=$(eval echo ~${SUDO_USER})	
+	
+		#path do fedora/rpm/redhat
+		diretoriorpm=${USER_HOME}/.vim/
+		
+
+
+		# verificar se já contém o vim e git instalado. Caso não, instalá.
+		if ! rpm -qa | grep -qw vim-enhanced && git && tmux && ack && ctags ; then
+
+			yum install -y vim-enhanced git tmux ack ctags
+
+		fi
+
+
+
+		if [ -d "$diretoriorpm" ]; then
+
+			rm -r ${USER_HOME}/.vim
+
+			else
+
+				mkdir ${USER_HOME}/.vim
+
+			fi
+
+			mv ${USER_HOME}/vimfiles/.vim ${USER_HOME}/ 
+			mv ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
+			mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
+			mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
+			rm -R ${USER_HOME}/vimfiles
+			echo -e "\nClonando e instalando o Neocomlcache"
+			echo -e "Aguarde, este procedimento poderá demorar...\n"
+			
+			cd ${USER_HOME}/.vim/bundle/ && git clone https://github.com/Shougo/neocomplcache.vim 
+
+
+	fi
+	# caso seja deb
+	if [[ "$questao" = "2" ]]; then
+		#debian deb
+
+		if  ! dpkg-query -l vim git tmux ack-grep ; then
+			#verificar se já está instalado
+			apt-get install vim git tmux ack-grep cmake -y
+
+
+		fi
+
+		# path do debian
+		diretoriodeb=$HOME/.vim/
+
+
+		if [ -d "$diretoriodeb" ]; then
+
+			rm -r $HOME/.vim
+
+		else
+
+			mkdir $HOME/.vim
+
+		fi
+
+
+		mv $HOME/vimfiles/.vim $HOME/ && rm -R $HOME/vimfiles
+		mv $HOME/.vim/*.vim /usr/share/vim/vim*/colors/
+		mv $HOME/.vim/.vimrc $HOME/
+
+	fi
+
+	# caso seja pacman
+	if [[ "$questao" = "3" ]]; then
+	
+		# Forçando o modo root a interpretar o home
+		USER_HOME=$(eval echo ~${SUDO_USER})	
+	
+		#path do fedora/rpm/redhat
+		diretoriopac=${USER_HOME}/.vim/
+		
+
+
+		# verificar se já contém o vim e git instalado. Caso não, instalá.
+		if ! pacman -Qqe | grep vim git tmux ack ; then
+
+			pacman -S vim git tmux ack --noconfirm
+
+		fi
+
+
+
+		if [ -d "$diretoriopac" ]; then
+
+			rm -r ${USER_HOME}/.vim
+
+		else
+
+			mkdir ${USER_HOME}/.vim
+
+		fi
+
+		mv ${USER_HOME}/vimfiles/.vim ${USER_HOME}/ && rm -R ${USER_HOME}/vimfiles
+		mv ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
+		mv ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
+		mv ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
+
+
+	fi
+
+
+	echo "Vim pack instalado com sucesso!"
+fi
+
