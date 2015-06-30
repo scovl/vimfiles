@@ -28,27 +28,38 @@ if [[ "$questao" = "1" ]]; then
 		
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
 		if ! rpm -qa | grep -qw vim-enhanced && git && tmux && ack && ctags ; then
-
+			# Caso não tenha, será instalado
 			sudo -i yum install -y vim-enhanced git tmux ack ctags
 
 		fi
+	
+
+		# Verifica se existe o caminho vimfiles	
+		if [ -d "$caminho/vimfiles" ]; then
+
+			# Dando pull
+			git pull
+		else	
+			# Clonando o vimfiles
+			git clone https://github.com/lobocode/vimfiles
+		fi
+
 
 
 		if [ -d "$diretoriovim" ]; then
-			
+
 			rm -r $caminho/.vim
 
-			else
-				
-				mkdir $caminho/.vim
+		else
 
-			fi
+			mkdir $caminho/.vim
 
-			mv $caminho/vimfiles/.vim $caminho/ 
-			mv $caminho/.vim/*.vim /usr/share/vim/vim*/colors/
-			mv $caminho/.vim/.vimrc $caminho/
-			mv $caminho/.vim/monaco.ttf /usr/share/fonts/
-			rm -R $caminho/vimfiles
+		fi
+
+			cp -r $caminho/vimfiles/.vim $caminho/ 
+			cp $caminho/.vim/*.vim /usr/share/vim/vim*/colors/
+			cp $caminho/.vim/.vimrc $caminho/
+			cp $caminho/.vim/monaco.ttf /usr/share/fonts/
 			echo -e "\nClonando e instalando o Neocomlcache"
 			echo -e "Aguarde, este procedimento poderá demorar...\n"
 			
