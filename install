@@ -49,7 +49,7 @@ if [[ "$questao" = "1" ]]; then
 
 	if [ -d "$diretoriovim" ]; then
 
-		echo -e "\n.vim já existe em seu diretório home"
+		echo -e "\n.vim já existe em seu diretório home\n"
 
 	else
 
