@@ -37,7 +37,7 @@ if [[ "$questao" = "1" ]]; then
 	# Verifica se existe o caminho vimfiles	
 	if [ -d "$caminho/vimfiles" ]; then
 
-		echo "Atualizando o vimfiles:"
+		echo -e "Atualizando o vimfiles:\n"
 		git pull
 	else	
 		# Clonando o vimfiles
@@ -65,13 +65,13 @@ if [[ "$questao" = "1" ]]; then
 
 	if [ -d "$caminho/.vim/bundle/neocomplcache.vim" ]; then
 
-		echo "Neocomlcache já está instalado!" 
+		echo -e "\nNeocomlcache já está instalado!" 
 	else
 		cd $caminho/.vim/bundle/ && git clone https://github.com/Shougo/neocomplcache.vim 
 	fi
 	
 
-	echo "vimfiles instalado com sucesso!!" 
+	echo -e "\nvimfiles instalado com sucesso!!" 
 
 fi
 
