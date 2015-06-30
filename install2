@@ -3,13 +3,13 @@
 # Script de instalação do vimfiles Pack by Vitor Lobo
 
 #Capturar o nome do usuário
-usuario=$(whoami)
+export usuario=$(whoami)
 
 #Capturar o caminho do diretório home do usuário
-caminho=/home/$usuario
+export caminho=/home/$usuario
 
 #caminho do .vim no diretório home
-diretoriovim=$caminho/.vim/
+export diretoriovim=$caminho/.vim/
 
 
 echo "O seu sistema é baseado em:
@@ -37,7 +37,7 @@ if [[ "$questao" = "1" ]]; then
 	# Verifica se existe o caminho vimfiles	
 	if [ -d "$caminho/vimfiles" ]; then
 
-		# Dando pull
+		echo "Atualizando o vimfiles:"
 		git pull
 	else	
 		# Clonando o vimfiles
@@ -46,15 +46,15 @@ if [[ "$questao" = "1" ]]; then
 
 
 
-	if [ -d "$diretoriovim" ]; then
+	# if [ -d "$diretoriovim" ]; then
 
-		sudo -i rm -r $caminho/.vim
+	# sudo -i rm -r $caminho/.vim
 
-	else
+	# else
 
-		sudo -i mkdir $caminho/.vim
+	# sudo -i mkdir $caminho/.vim
 
-	fi
+	# fi
 
 	cp -r $caminho/vimfiles/.vim $caminho/ 
 	sudo -i cp $caminho/.vim/*.vim /usr/share/vim/vim*/colors/
@@ -62,13 +62,16 @@ if [[ "$questao" = "1" ]]; then
 	sudo -i cp $caminho/.vim/monaco.ttf /usr/share/fonts/
 	echo -e "\nClonando e instalando o Neocomlcache"
 	echo -e "Aguarde, este procedimento poderá demorar...\n"
-	
+
 	if [ -d "$caminho/.vim/bundle/neocomplcache.vim" ]; then
-	
-		cd $caminho/.vim/bundle/ && git clone https://github.com/Shougo/neocomplcache.vim 
+
+		echo "Neocomlcache já está instalado!" 
 	else
-		echo "Vim pack instalado com sucesso!"
+		cd $caminho/.vim/bundle/ && git clone https://github.com/Shougo/neocomplcache.vim 
 	fi
+	
+
+	echo "vimfiles instalado com sucesso!!" 
 
 fi
 
