@@ -21,7 +21,7 @@ echo "O seu sistema é baseado em:
 
 echo "Digite o número correspondente a questão a cima:";read questao
 
-echo "Aguarde a configuração e instalação do VIM by Vitor Lobo..."
+echo -e "\nAguarde a configuração e instalação do VIM by Vitor Lobo...\n"
 
 # caso seja rpm
 if [[ "$questao" = "1" ]]; then
@@ -46,22 +46,24 @@ if [[ "$questao" = "1" ]]; then
 
 
 
-	# if [ -d "$diretoriovim" ]; then
+	if [ -d "$diretoriovim" ]; then
 
-	# sudo -i rm -r $caminho/.vim
+		echo -e "\n.vim já existe em seu diretório home"
 
-	# else
+	else
 
-	# sudo -i mkdir $caminho/.vim
+		sudo -i mkdir $caminho/.vim
 
-	# fi
+	fi
 
 	cp -r $caminho/vimfiles/.vim $caminho/ 
 	sudo -i cp $caminho/.vim/*.vim /usr/share/vim/vim*/colors/
 	cp $caminho/.vim/.vimrc $caminho/
 	sudo -i cp $caminho/.vim/monaco.ttf /usr/share/fonts/
-	echo -e "\nClonando e instalando o Neocomlcache"
+	echo -e "\nInstalando o Neocomlcache"
 	echo -e "Aguarde, este procedimento poderá demorar...\n"
+
+	sleep 1
 
 	if [ -d "$caminho/.vim/bundle/neocomplcache.vim" ]; then
 
@@ -69,9 +71,9 @@ if [[ "$questao" = "1" ]]; then
 	else
 		cd $caminho/.vim/bundle/ && git clone https://github.com/Shougo/neocomplcache.vim 
 	fi
-	
 
-	echo -e "\nvimfiles instalado com sucesso!!" 
+
+	echo -e "\nvimfiles instalado com sucesso!!\n\n" 
 
 fi
 
