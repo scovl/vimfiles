@@ -41,6 +41,7 @@ if [[ "$questao" = "1" ]]; then
 		git pull
 	else	
 		# Clonando o vimfiles
+		echo -e "\nClonando o vimfiles no github\n"
 		git clone https://github.com/lobocode/vimfiles
 	fi
 
