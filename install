@@ -15,7 +15,7 @@ export diretoriovim=$caminho/.vim/
 echo "O seu sistema é baseado em:
 
 1 - Redhat/rpm
-2 - Debian/deb
+2 - Debian/deb (não implementado ainda)
 "
 
 echo "Digite o número correspondente a questão a cima:";read questao
