@@ -65,13 +65,8 @@ if [[ "$questao" = "1" ]]; then
 
 	sleep 1
 
-	if [ -d "$caminho/.vim/bundle/neocomplcache.vim" ]; then
-
-		echo -e "\nNeocomlcache já está instalado!" 
-	else
 		sudo -i mkdir $caminho/.vim/bundle/neocomplcache.vim
-		git clone https://github.com/Shougo/neocomplcache.vim $caminho/.vim/bundle/
-	fi
+		sudo -i	git clone https://github.com/Shougo/neocomplcache.vim $caminho/.vim/bundle/neocomplcache.vim
 
 
 	echo -e "\nvimfiles instalado com sucesso!!\n\n" 
