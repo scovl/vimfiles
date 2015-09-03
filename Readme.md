@@ -47,7 +47,7 @@ __   ___ _ __ ___ | |_ _| | ___  ___
 ```shell
 $ git clone https://github.com/lobocode/vimfiles.git
 $ cd vimfiles
-$ sudo ./install                    
+$ ./install                    
 ```
  
 
