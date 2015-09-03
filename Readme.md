@@ -12,8 +12,8 @@ __   ___ _ __ ___ | |_ _| | ___  ___
 * **-** http://lobocode.github.io/
 * **-** http://softwarelivre.org/lobocode
 * **-** E-mail: lobocode@gmail.org
-
-* **-** Outros: #software-livre ----> irc.freenode.net
+* **-** Reddit: https://www.reddit.com/user/lobocode/
+* **-** Outros: #software-livre , #samba, #pfsense  ----> irc.freenode.net
 
 <img src="https://raw.githubusercontent.com/lobocode/vimfiles/master/myvim.png" />
 </p>
