@@ -26,6 +26,44 @@ echo -e "\nAguarde a configuração e instalação do VIM by Vitor Lobo...\n"
 if [[ "$questao" = "1" ]]; then
 
 	# verificar se já contém o vim e git instalado. Caso não, instalá.
+	if ! rpm -qa | grep -qw vim-enhanced; then
+		# Caso não tenha, será instalado
+		sudo -i yum install -y vim-enhanced git tmux ack ctags
+
+	fi
+
+
+	if [ -d "$diretoriovim" ]; then
+
+		echo -e "\n.vim já existe em seu diretório home\n"
+
+	else
+
+		sudo -i mkdir $caminho/.vim
+
+	fi
+
+	sudo -i cp -r $caminho/vimfiles/.vim $caminho/ 
+	sudo -i cp -r $caminho/.vim/*.vim /usr/share/vim/vim*/colors/
+	cp $caminho/.vim/.vimrc $caminho/
+	sudo -i cp $caminho/.vim/monaco.ttf /usr/share/fonts/
+	echo -e "\nInstalando o Neocomlcache"
+	echo -e "Aguarde, este procedimento poderá demorar...\n"
+
+	sleep 1
+
+		sudo -i mkdir $caminho/.vim/bundle/neocomplcache.vim
+		sudo -i	git clone https://github.com/Shougo/neocomplcache.vim $caminho/.vim/bundle/neocomplcache.vim
+
+
+	echo -e "\nvimfiles instalado com sucesso!!\n\n" 
+
+fi
+
+# caso seja deb
+if [[ "$questao" = "2" ]]; then
+
+	# verificar se já contém o vim e git instalado. Caso não, instalá.
 	if ! rpm -qa | grep -qw vim-enhanced && git && tmux && ack && ctags ; then
 		# Caso não tenha, será instalado
 		sudo -i yum install -y vim-enhanced git tmux ack ctags
