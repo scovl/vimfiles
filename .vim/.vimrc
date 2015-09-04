@@ -156,9 +156,21 @@ set laststatus=2
 
 " Tema do syntax highlight
 
+" Colors!
+set t_Co=256        " 265 colors
+syntax enable       " Enable syntax highlighting
+colo gruvbox        " Color scheme
+" Requires installation of gruvbox, see: https://github.com/morhetz/gruvbox
+" Type :colo <tab> for a selection of built-in color schemes.
 
-colorscheme gruvbox
-set background=dark
+" Fixing colors in gruvbox
+if !has("gui_running")
+   let g:gruvbox_italic=0
+endif
+
+set background=dark " dark background
+
+
 " colorscheme badwolf
 "leg g:molokai_original = 1
 "colorscheme molokai
