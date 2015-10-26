@@ -12,7 +12,7 @@ else
 
 
 	echo "O seu sistema é baseado em:
-	
+
 	1 - Redhat/rpm
 
 	"
@@ -22,13 +22,13 @@ else
 	echo "Aguarde enquanto instala e configura o VIM by Vitor Lobo..."
 	# caso seja rpm
 	if [[ "$questao" = "1" ]]; then
-	
+
 		# Forçando o modo root a interpretar o home
 		USER_HOME=$(eval echo ~${SUDO_USER})	
-	
+
 		#path do fedora/rpm/redhat
 		diretoriorpm=${USER_HOME}/.vim/
-		
+
 
 
 		# verificar se já contém o vim e git instalado. Caso não, instalá.
@@ -44,39 +44,39 @@ else
 
 			rm -r ${USER_HOME}/.vim
 
-			else
+		else
 
-                            mkdir ${USER_HOME}/.vim
+			mkdir ${USER_HOME}/.vim
 
-			fi
+		fi
 
-                cp -r ${USER_HOME}/vimfiles/.vim ${USER_HOME}/ 
-                cp -r ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
-                cp -r ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
-			
-			
-                # Estranhamento nem sempre este diretório existe por padrão, então:
-                
-                if [[ -d "/usr/share/fonts/" ]]; then
-                        #Se o diretório existe
-                        sudo -i cp ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
-
-                else
-
-                        sudo -i mkdir /usr/share/fonts/ && sudo -i cp ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
-
-                fi
-
-                echo -e "\nInstalando o Neocomlcache"
-                echo -e "Aguarde, este procedimento poderá demorar...\n"
-
-                sleep 1
-
-                sudo -i mkdir ${USER_HOME}/.vim/bundle/neocomplcache.vim
-                sudo -i	git clone https://github.com/Shougo/neocomplcache.vim ${USER_HOME}/.vim/bundle/neocomplcache.vim
+		cp -r ${USER_HOME}/vimfiles/.vim ${USER_HOME}/ 
+		cp -r ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
+		cp -r ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
 
 
-                echo -e "\nvimfiles instalado com sucesso!!\n\n"  
+		# Estranhamento nem sempre este diretório existe por padrão, então:
+
+		if [[ -d "/usr/share/fonts/" ]]; then
+			#Se o diretório existe
+			sudo -i cp ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
+
+		else
+
+			sudo -i mkdir /usr/share/fonts/ && sudo -i cp ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
+
+		fi
+
+		echo -e "\nInstalando o Neocomlcache"
+		echo -e "Aguarde, este procedimento poderá demorar...\n"
+
+		sleep 1
+
+		sudo -i mkdir ${USER_HOME}/.vim/bundle/neocomplcache.vim
+		sudo -i	git clone https://github.com/Shougo/neocomplcache.vim ${USER_HOME}/.vim/bundle/neocomplcache.vim
+
+
+		echo -e "\nvimfiles instalado com sucesso!!\n\n"  
 
 
 	fi
