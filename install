@@ -2,124 +2,82 @@
 
 # Script de instalação do vimfiles Pack by Vitor Lobo
 
-#Capturar o nome do usuário
-export usuario=$(whoami)
+# Pedindo acesso root para instalação do vim mypack
 
-#Capturar o caminho do diretório home do usuário
-export caminho=/home/$usuario
+if [[ ! $(whoami) = "root" ]]; then
 
-#caminho do .vim no diretório home
-export diretoriovim=$caminho/.vim/
+	echo "É necessário a permissão de super usuário (root) para instalação do vimfiles"
+
+else
 
 
-echo "O seu sistema é baseado em:
+	echo "O seu sistema é baseado em:
+	
+	1 - Redhat/rpm
 
-1 - Redhat/rpm
-2 - Debian/deb 
-"
+	"
 
-echo "Digite o número correspondente a questão a cima:";read questao
+	echo "Digite o número correspondente a questão a cima:";read questao
 
-echo -e "\nAguarde a configuração e instalação do VIM by Vitor Lobo...\n"
+	echo "Aguarde enquanto instala e configura o VIM by Vitor Lobo..."
+	# caso seja rpm
+	if [[ "$questao" = "1" ]]; then
+	
+		# Forçando o modo root a interpretar o home
+		USER_HOME=$(eval echo ~${SUDO_USER})	
+	
+		#path do fedora/rpm/redhat
+		diretoriorpm=${USER_HOME}/.vim/
+		
 
-# caso seja rpm
-if [[ "$questao" = "1" ]]; then
 
-	# verificar se já contém o vim e git instalado. Caso não, instalá.
-	if ! rpm -qa | grep -qw vim-enhanced; then
-		# Caso não tenha, será instalado
-		sudo -i yum install -y vim-enhanced git tmux ack ctags
+		# verificar se já contém o vim e git instalado. Caso não, instalá.
+		if ! rpm -qa | grep -qw vim-minimal && git && tmux && ack ; then
+
+			dnf install -y vim-enhanced git tmux ack ctags
+
+		fi
+
+
+
+		if [ -d "$diretoriorpm" ]; then
+
+			rm -r ${USER_HOME}/.vim
+
+			else
+
+                            mkdir ${USER_HOME}/.vim
+
+			fi
+
+                cp -r ${USER_HOME}/vimfiles/.vim ${USER_HOME}/ 
+                cp -r ${USER_HOME}/.vim/*.vim /usr/share/vim/vim*/colors/
+                cp -r ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
+			
+			
+                # Estranhamento nem sempre este diretório existe por padrão, então:
+                
+                if [[ -d "/usr/share/fonts/" ]]; then
+                        #Se o diretório existe
+                        sudo -i cp ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
+
+                else
+
+                        sudo -i mkdir /usr/share/fonts/ && sudo -i cp ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
+
+                fi
+
+                echo -e "\nInstalando o Neocomlcache"
+                echo -e "Aguarde, este procedimento poderá demorar...\n"
+
+                sleep 1
+
+                sudo -i mkdir ${USER_HOME}/.vim/bundle/neocomplcache.vim
+                sudo -i	git clone https://github.com/Shougo/neocomplcache.vim ${USER_HOME}/.vim/bundle/neocomplcache.vim
+
+
+                echo -e "\nvimfiles instalado com sucesso!!\n\n"  
+
 
 	fi
-
-	# verificar se o diretório .vim já existe no /usuario/home/
-	if [ -d "$diretoriovim" ]; then
-
-		echo -e "\n.vim já existe em seu diretório home\n"
-
-	else
-
-		sudo -i mkdir $caminho/.vim
-
-	fi
-
-	sudo -i cp -r $caminho/vimfiles/.vim $caminho/ 
-	sudo -i cp -r $caminho/.vim/*.vim /usr/share/vim/vim*/colors/
-	cp $caminho/.vim/.vimrc $caminho/
-
-	# Estranhamento nem sempre este diretório existe por padrão, então:
-	if [[ -d "/usr/share/fonts/" ]]; then
-		#Se o diretório existe
-		sudo -i cp $caminho/.vim/monaco.ttf /usr/share/fonts/
-
-	else
-
-		sudo -i mkdir /usr/share/fonts/ && sudo -i cp $caminho/.vim/monaco.ttf /usr/share/fonts/
-
-	fi
-
-
-	echo -e "\nInstalando o Neocomlcache"
-	echo -e "Aguarde, este procedimento poderá demorar...\n"
-
-	sleep 1
-
-	sudo -i mkdir $caminho/.vim/bundle/neocomplcache.vim
-	sudo -i	git clone https://github.com/Shougo/neocomplcache.vim $caminho/.vim/bundle/neocomplcache.vim
-
-
-	echo -e "\nvimfiles instalado com sucesso!!\n\n" 
-
 fi
-
-# caso seja deb
-if [[ "$questao" = "2" ]]; then
-
-	# verificar se já contém o vim e git instalado. Caso não, instalá.
-	if ! dpkg-query -l vim git; then
-		# Caso não tenha, será instalado
-		sudo -i apt-get install -y vim git
-
-	fi
-
-
-	if [ -d "$diretoriovim" ]; then
-
-		echo -e "\n.vim já existe em seu diretório home\n"
-
-	else
-
-		sudo -i mkdir $caminho/.vim
-
-	fi
-
-	sudo -i cp -r $caminho/vimfiles/.vim $caminho/ 
-	sudo -i cp -r $caminho/.vim/*.vim /usr/share/vim/vim*/colors/
-	cp $caminho/.vim/.vimrc $caminho/
-
-	# Estranhamento nem sempre este diretório existe por padrão, então:
-	if [[ -d "/usr/share/fonts/" ]]; then
-		#Se o diretório existe
-		sudo -i cp $caminho/.vim/monaco.ttf /usr/share/fonts/
-
-	else
-
-		sudo -i mkdir /usr/share/fonts/ && sudo -i cp $caminho/.vim/monaco.ttf /usr/share/fonts/
-
-	fi
-
-
-	echo -e "\nInstalando o Neocomlcache"
-	echo -e "Aguarde, este procedimento poderá demorar...\n"
-
-
-	sleep 1
-
-	sudo -i mkdir $caminho/.vim/bundle/neocomplcache.vim
-	sudo -i	git clone https://github.com/Shougo/neocomplcache.vim $caminho/.vim/bundle/neocomplcache.vim
-
-
-	echo -e "\nvimfiles instalado com sucesso!!\n\n" 
-
-fi
-
