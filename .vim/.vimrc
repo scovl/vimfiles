@@ -9,21 +9,19 @@ set encoding=utf-8
 " Usa as definições do vim, não as do vi
 set nocompatible
 
-" Habilita o uso do mouse no vim para cliques e coisas do tipo
+" Habilita a cópia de linhas para fora do vim com o mouse, ignorando o número de linhas
 set mouse=a
 
 " Permite a navegação dentro de uma mesma linha longa com j e k
 set wrap
 
-" Cola textos, códigos sem bug de indetação
+" Cola textos, códigos sem bug de indetação precisando apenas pressionar f6
 map <F6> :set paste!<CR>
 
 "Syntastic 
 nmap <leader>e :Errors<CR>
 let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs = 0
-
-
 
 " Ctags recursive database
 map <F4> :CtrlPTag<CR>
@@ -78,7 +76,6 @@ augroup END
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
-
 
 
 
@@ -186,7 +183,7 @@ syntax enable
 " Habilita auto-indentação
 if has("autocmd")
  filetype plugin indent on
-endif"")"
+endif
 
 :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
