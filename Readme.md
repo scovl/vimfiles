@@ -69,10 +69,10 @@ $ ./install
 * **8** Se pressionar F2, abrirá o taskbar à direita da tela.
 * **9** Para mudar de aba, pressione tp (tabprevious) ou tn (tabnext) ou caso se trate de buffer (aba na memória), bp(bufferprevious) e bn (buffernext).
 
-```shell
+---
 A diferença entre bufferprevious, buffernext e tabnext e tabprevious, pode parecer confusa. Na verdade, quando você abre abas no vim de acordo com a necessidade, isto é, gradativamente, estas abas serão gravadas na memória com suas respectivas posições. Ou seja, trata-se de posições no "buffer".No entanto caso você trabalhe com abas premeditadamente, não se trata de buffer e sim de abas mesmo e neste caso, basta usar o tabnext e tabprevious.
+---
 
-```
 * **10** Para quem usa o git, recomendo ler a documentação do fugitive. Para fugitive, coloquei os atalhos gs (gitstatus) e gw (gitwrite) que corresponde ao git add. No entanto, estudando a documentação poderá explorar muito mais do plugin.
 * **11** A tecla F3 habilita e desabilita o neocomplcache (auto-complete).
 * **12** A tecla F4 habilita o ctags para auxiliar a encontrar dados referentes ao que você busca em outros módulos.
