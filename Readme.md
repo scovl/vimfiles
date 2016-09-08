@@ -36,7 +36,7 @@ __   ___ _ __ ___ | |_ _| | ___  ___
 * CSS3Syntax - Reconhece as novas propriedades do CSS3
 * Ack - Busca avançada de palavras ocorridas em módulos, arquivos etc...
 * Preview - Abre arquivo html, markdown , arquivos de marcação no browser
-* Tema do Syntax Highlight: Badwolf
+* Tema do Syntax Highlight: Gruvbox
 * SingleCompile - Compila e executa código em .c , .cpp com f10 e f9 só compila
 * Vim-Preview - Preview de páginas web com <leader>P ou seja, \P maiúsculo 
 * Tagbar - Barra lateral Explorer
