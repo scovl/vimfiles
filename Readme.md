@@ -45,6 +45,8 @@ __   ___ _ __ ___ | |_ _| | ___  ___
 * Ctag - Ajuda a identificar a variável ou palavra, linha, texto em outros módulos, páginas.
 * Shougo neocomplcache - auto-complete com cache (configurado para usar sem comprometer as setas).
 * Better-indent-support-for-php-with-html - Corrige a indentação para códigos PHP. 
+* vim-jquery - Trabalha melhor com jquery.
+* vim-blade - Syntax Highlight para Laravel4+.
 
 # Instalação 
 ```shell
