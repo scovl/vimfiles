@@ -44,7 +44,8 @@ __   ___ _ __ ___ | |_ _| | ___  ___
 * Vim-Pasta ajustar indentação quando por algum motivo estiver errada
 * Ctag - Ajuda a identificar a variável ou palavra, linha, texto em outros módulos, páginas.
 * Shougo neocomplcache - auto-complete com cache (configurado para usar sem comprometer as setas).
- 
+* Better-indent-support-for-php-with-html - Corrige a indentação para códigos PHP. 
+
 # Instalação 
 ```shell
 Obs: O instalador no momento foi adaptado apenas para distribuições Fedora,Centos e Rhel. Mas, se você compreende o funcionamento do shell script, não terá dificuldades em compreender onde colocar os arquivos para instalar este pack em outras distribuições.
