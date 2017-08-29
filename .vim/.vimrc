@@ -127,12 +127,6 @@ set noerrorbells
 set nobackup
 set noswapfile
 
-"vim-query
-Plugin 'itspriddle/vim-jquery'
-
-"vim-blade
-Plugin 'jwalton512/vim-blade'
-
 " Quando abrir um arquivo, permanecer no diretorio
 set autochdir 
 
