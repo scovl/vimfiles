@@ -11,7 +11,7 @@ __   ___ _ __ ___ | |_ _| | ___  ___
 * **-** by vitorlobo
 * **-** http://lobocode.github.io/
 * **-** http://softwarelivre.org/lobocode
-* **-** E-mail: lobocode@gmail.org
+* **-** E-mail: lobocode@gmail.com
 * **-** Reddit: https://www.reddit.com/user/lobocode/
 * **-** Outros: #software-livre , #samba, #pfsense  ----> irc.freenode.net
 
@@ -47,6 +47,8 @@ __   ___ _ __ ___ | |_ _| | ___  ___
 * Better-indent-support-for-php-with-html - Corrige a indentação para códigos PHP. 
 * vim-jquery - Trabalha melhor com jquery.
 * vim-blade - Syntax Highlight para Laravel4+.
+* vim-Go - Plugin para desenvolvimento GO no vim
+
 
 # Instalação 
 ```shell
@@ -54,7 +56,7 @@ Obs: O instalador no momento foi adaptado apenas para distribuições Fedora,Cen
 
 $ git clone https://github.com/lobocode/vimfiles.git
 $ cd vimfiles
-$ ./install                    
+$ sudo ./install                    
 ```
  
 
@@ -72,6 +74,45 @@ $ ./install
 * **8** Se pressionar F2, abrirá o taskbar à direita da tela.
 * **9** Para mudar de aba, pressione tp (tabprevious) ou tn (tabnext) ou caso se trate de buffer (aba na memória), bp(bufferprevious) e bn (buffernext).
 
+**Como usar o vim-GO:**
+
+```shell
+
+* :GoInstallBinaries - Instala os binários do GO
+* :GoPath - Visualiza os diretórios do GO no diretório PATH
+* :GoRun - Executará seu código;
+* :GoBuild - Compila o pacote, mas não gera o binário (retorno na barra de status) ;
+* :GoAlternate - Abrirá o arquivo teste (procura pelo arquivoAberto_test.go), se usar o sinal ! ele criará o arquivo se não existir;
+* :GoTest - Executa sua suíte de teste (retorno na barra de status) ;
+* :GoTestFunc - Executa apenas o teste onde o cursor está (retorno na barra de status) ;
+* :GoTestCompile - Testa se não há erros para compilar o projeto (retorno na barra de status) ;
+* :GoCoverage -Este acho bem legal ele bota um highlight no teu código mostrando sua cobertura (Se está usando meu projeto, note a linha 28);
+* :GoCoverageClear -Remove o highlight criado pelo comando acima;
+* :GoCoverageToogle - Alterna entre exibir ou remover o highlight do código;
+* :GoCoverageBrowser - Como o GoCoverage, mas abre no seu navegador;
+* :GoImport - Sabe quando está lá no fim do arquivo e quer usar o Print.., ai tu vai rodar o código e o compilador diz que não importou o pacote fmt, com este comando você faz isso, execute por ex. :GoImport fmt ;
+* :GoDrop - Este faz o inverso do anterior, sabe quando tu remove o print e esquece de remover o pacote e ele reclama, execute por ex. :GoDrop fmt ;
+* :GoImportAs - Este serve quando tu precisa importar o pacote com um álias, execute por ex. :GoImportAs f fmt ;
+* :GoImports - Este “auto importa” os pacotes necessários.Se tu usar o Print por ex. e rodar este comando ele adicionará o fmt (Confesso que acho útil, mas meu TOC não me deixa usar ele =) ) ;
+* :GoMetaLinter - Executa as ferramentas go vet, golint e errcheck (se está com meu projeto note que ele vai falar sobre o comentário das funções, isso me ajuda a manter um código padronizado) ;
+* :GoDef - Vai para definição onde o cursor está;
+* :GoDefPop - Volta para onde estava antes de executar o GoDef;
+* :GoDecls - *Mostrará todas func e types criadas no arquivo;
+* :GoDeclsDir - *Mostrará todas funcs e types criadas no diretório;
+* :GoDoc - Faz um split no topo da tela e mostra a documentação da função onde o cursor está(vale dizer que funciona tanto para o teu código como a standard library);
+* :GoInfo - Mostrará na barra de status a assinatura da função;
+* :GoSameIds - Em uma variável se usar este comando ele irá colocar um highlight em todos lugares onde a chamou (apenas na variável e não na linha) ;
+* :GoSameIdsClear - Remove o highlight criado pelo comando acima;
+* :GoSameIdsToggle - Alterna entre exibir ou remover o highlight do código;
+* :GoReferrers - Em uma declaração execute este comando para procurar referências em todos pacotes do seu workspace;
+* :GoDescribe - Parecido com o GoInfo, um pouco mais avançado (te dará mais informações,onde está definida e onde está sendo usado) ;
+* :GoRename - Este é bem legal, ele vai pegar a palavra onde o cursor está e na barra de status permitirá que a mude. Ele vai procurar em todos pacotes do teu workspace (ajuda no refactoring, mas deve tomar cuidado) ;
+* :GoPlay - Confesso que este não usei ainda, mas achei legal mostrar. Ele irá compartilhar o código na internet(play.golang.org).Exibirá o link na barra de status e abrirá a url no seu navegador.
+
+
+```
+
+
 ---
 
 A diferença entre bufferprevious, buffernext e tabnext e tabprevious, pode parecer confusa. Na verdade, quando você abre abas no vim de acordo com a necessidade, isto é, gradativamente, estas abas serão gravadas na memória com suas respectivas posições. Ou seja, trata-se de posições no "buffer".No entanto caso você trabalhe com abas premeditadamente, não se trata de buffer e sim de abas mesmo e neste caso, basta usar o tabnext e tabprevious.
@@ -85,8 +126,8 @@ A diferença entre bufferprevious, buffernext e tabnext e tabprevious, pode pare
  
 # Referências #
 
-* Vimbook em PT-BR: https://code.google.com/p/vimbook/
-* Fábio Akita Vim ScreenCast: http://goo.gl/r7CtaF
-* Curso de vim básico: http://aurelio.net/vim/
-* Screencasts: http://www.vimninjas.com/ , http://vimcasts.org/
-* Temas diversos para vim: http://vimcolors.com/ 
+* Vimbook em PT-BR: [https://code.google.com/p/vimbook/](https://code.google.com/p/vimbook/){:target="_blank"}
+* Fábio Akita Vim ScreenCast: [http://goo.gl/r7CtaF](http://goo.gl/r7CtaF){:target="_blank"}
+* Curso de vim básico: [http://aurelio.net/vim/](http://aurelio.net/vim/){:target="_blank"}
+* Screencasts: [http://www.vimninjas.com/](http://www.vimninjas.com/){:target="_blank"} , [http://vimcasts.org/](http://vimcasts.org/){:target="_blank"}
+* Temas diversos para vim: [http://vimcolors.com/](http://vimcolors.com/){:target="_blank"} 
