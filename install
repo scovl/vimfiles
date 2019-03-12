@@ -66,10 +66,12 @@ else
 	# To super user
 	sudo -i mkdir ${USER_HOME}/.vim/bundle/neocomplcache.vim
 	sudo -i	git clone https://github.com/Shougo/neocomplcache.vim ${USER_HOME}/.vim/bundle/neocomplcache.vim
+	sudo -i	git clone https://github.com/fatih/vim-go.git ${USER_HOME}/.vim/bundle/vim-go
 
 	# To root user
 	sudo -i mkdir /root/.vim/bundle/neocomplcache.vim
 	sudo -i git clone https://github.com/Shougo/neocomplcache.vim /root/.vim/bundle/neocomplcache.vim
+	sudo -i	git clone https://github.com/fatih/vim-go.git /root/.vim/bundle/vim-go
 
 
 	echo -e "\nvimfiles instalado com sucesso!!\n\n"  

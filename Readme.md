@@ -78,36 +78,36 @@ $ sudo ./install
 
 ```shell
 
-* :GoInstallBinaries - Instala os binários do GO
-* :GoPath - Visualiza os diretórios do GO no diretório PATH
-* :GoRun - Executará seu código;
-* :GoBuild - Compila o pacote, mas não gera o binário (retorno na barra de status) ;
-* :GoAlternate - Abrirá o arquivo teste (procura pelo arquivoAberto_test.go), se usar o sinal ! ele criará o arquivo se não existir;
-* :GoTest - Executa sua suíte de teste (retorno na barra de status) ;
-* :GoTestFunc - Executa apenas o teste onde o cursor está (retorno na barra de status) ;
-* :GoTestCompile - Testa se não há erros para compilar o projeto (retorno na barra de status) ;
-* :GoCoverage -Este acho bem legal ele bota um highlight no teu código mostrando sua cobertura (Se está usando meu projeto, note a linha 28);
-* :GoCoverageClear -Remove o highlight criado pelo comando acima;
-* :GoCoverageToogle - Alterna entre exibir ou remover o highlight do código;
-* :GoCoverageBrowser - Como o GoCoverage, mas abre no seu navegador;
-* :GoImport - Sabe quando está lá no fim do arquivo e quer usar o Print.., ai tu vai rodar o código e o compilador diz que não importou o pacote fmt, com este comando você faz isso, execute por ex. :GoImport fmt ;
-* :GoDrop - Este faz o inverso do anterior, sabe quando tu remove o print e esquece de remover o pacote e ele reclama, execute por ex. :GoDrop fmt ;
-* :GoImportAs - Este serve quando tu precisa importar o pacote com um álias, execute por ex. :GoImportAs f fmt ;
-* :GoImports - Este “auto importa” os pacotes necessários.Se tu usar o Print por ex. e rodar este comando ele adicionará o fmt (Confesso que acho útil, mas meu TOC não me deixa usar ele =) ) ;
-* :GoMetaLinter - Executa as ferramentas go vet, golint e errcheck (se está com meu projeto note que ele vai falar sobre o comentário das funções, isso me ajuda a manter um código padronizado) ;
-* :GoDef - Vai para definição onde o cursor está;
-* :GoDefPop - Volta para onde estava antes de executar o GoDef;
-* :GoDecls - *Mostrará todas func e types criadas no arquivo;
-* :GoDeclsDir - *Mostrará todas funcs e types criadas no diretório;
-* :GoDoc - Faz um split no topo da tela e mostra a documentação da função onde o cursor está(vale dizer que funciona tanto para o teu código como a standard library);
-* :GoInfo - Mostrará na barra de status a assinatura da função;
-* :GoSameIds - Em uma variável se usar este comando ele irá colocar um highlight em todos lugares onde a chamou (apenas na variável e não na linha) ;
-* :GoSameIdsClear - Remove o highlight criado pelo comando acima;
-* :GoSameIdsToggle - Alterna entre exibir ou remover o highlight do código;
-* :GoReferrers - Em uma declaração execute este comando para procurar referências em todos pacotes do seu workspace;
-* :GoDescribe - Parecido com o GoInfo, um pouco mais avançado (te dará mais informações,onde está definida e onde está sendo usado) ;
-* :GoRename - Este é bem legal, ele vai pegar a palavra onde o cursor está e na barra de status permitirá que a mude. Ele vai procurar em todos pacotes do teu workspace (ajuda no refactoring, mas deve tomar cuidado) ;
-* :GoPlay - Confesso que este não usei ainda, mas achei legal mostrar. Ele irá compartilhar o código na internet(play.golang.org).Exibirá o link na barra de status e abrirá a url no seu navegador.
+:GoInstallBinaries - Instala os binários do GO.
+:GoPath - Visualiza os diretórios do GO no diretório PATH.
+:GoRun - Executará seu código.
+:GoBuild - Compila o pacote, mas não gera o binário.
+:GoAlternate - Abrirá o arquivo teste (procura pelo arquivoAberto_test.go), se usar o sinal ! ele criará o arquivo se não existir.
+:GoTest - Executa sua suíte de teste.
+:GoTestFunc - Executa apenas o teste onde o cursor está.
+:GoTestCompile - Testa se não há erros para compilar o projeto.
+:GoCoverage - Acrescenta highlight ao código mostrando sua cobertura.
+:GoCoverageClear - Remove o highlight criado pelo comando acima.
+:GoCoverageToogle - Alterna entre exibir ou remover o highlight do código.
+:GoCoverageBrowser - Como o GoCoverage, mas abre no seu navegador.
+:GoImport - Importa o pacote que o compilador sentir falta.
+:GoDrop - Este faz o inverso do anterior, remove o pacote não usado.
+:GoImportAs - Importar pacote como alias, exemplo :GoImportAs f fmt.
+:GoImports - Este “auto importa” os pacotes necessários para compilar seu código.
+:GoMetaLinter - Executa as ferramentas go vet, golint e errcheck ajuda a manter o código padronizado.
+:GoDef - Vai para definição onde o cursor está.
+:GoDefPop - Volta para onde estava antes de executar o GoDef.
+:GoDecls - Mostrará todas func e types criadas no arquivo.
+:GoDeclsDir - Mostrará todas funcs e types criadas no diretório.
+:GoDoc - Faz um split no topo da tela e mostra a documentação da função onde o cursor está.
+:GoInfo - Mostrará na barra de status a assinatura da função.
+:GoSameIds - Em uma variável se usar este comando ele irá colocar um highlight em todos lugares onde a chamou (apenas na variável e não na linha).
+:GoSameIdsClear - Remove o highlight criado pelo comando acima.
+:GoSameIdsToggle - Alterna entre exibir ou remover o highlight do código.
+:GoReferrers - Em uma declaração execute este comando para procurar referências em todos pacotes do seu workspace.
+:GoDescribe - Parecido com o GoInfo, um pouco mais avançado (te dará mais informações,onde está definida e onde está sendo usado).
+:GoRename - Pega a palavra onde o cursor está e procura em todos pacotes do teu workspace.
+:GoPlay - Compartilha o código na internet(play.golang.org). Exibirá o link na barra de status e abrirá a url no seu navegador.
 
 
 ```
