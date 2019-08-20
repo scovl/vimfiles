@@ -1,0 +1,80 @@
+#!/bin/bash
+
+# Installation script of the vimfiles by Vitor Lobo
+
+# Check root user
+
+if [[ ! $(whoami) = "root" ]]; then
+
+	echo "É necessário a permissão de super usuário (root) para instalação do vimfiles"
+
+else
+
+	echo -e "\nInstalando vimfiles!!\n\n"  
+	# FIX whoami in super user mode
+	USER_HOME=$(eval echo ~${SUDO_USER})	
+
+	# Vim version
+	vim_version="81"
+
+	# Fedora path /rpm/redhat
+	rpmdir=${USER_HOME}/.vim/
+
+	# Check if vim already installed. If not, it will install
+	if ! rpm -qa | grep -qw vim-minimal && git && tmux && ack ; then
+
+		dnf install -y vim-enhanced git tmux ack ctags
+
+	fi
+
+	# Check if directories exist
+	if [ -d "$rpmdir" ]; then
+
+		rm -r ${USER_HOME}/.vim
+
+	else
+
+		mkdir ${USER_HOME}/.vim
+
+	fi
+
+	# To super user
+	cp -r ${USER_HOME}/vimfiles/.vim ${USER_HOME}/ 
+	cp -r ${USER_HOME}/.vim/*.vim /usr/share/vim/vim${vim_version}/colors/
+	cp -r ${USER_HOME}/.vim/.vimrc ${USER_HOME}/
+
+	# To root user
+	cp -r ${USER_HOME}/vimfiles/.vim /root/
+	cp -r ${USER_HOME}/.vim/.vimrc /root/
+
+	# Check if the default directory /usr/share/fonts exist
+	if [[ -d "/usr/share/fonts/" ]]; then
+		# If exist
+		sudo -i cp ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
+
+	else
+
+		sudo -i mkdir /usr/share/fonts/ && sudo -i cp ${USER_HOME}/.vim/monaco.ttf /usr/share/fonts/
+
+	fi
+
+	echo -e "\nInstalando o Neocomlcache"
+	echo -e "Aguarde, este procedimento poderá demorar...\n"
+
+	sleep 1
+
+	# To super user
+	sudo -i mkdir ${USER_HOME}/.vim/bundle/neocomplcache.vim
+	sudo -i	git clone https://github.com/Shougo/neocomplcache.vim ${USER_HOME}/.vim/bundle/neocomplcache.vim
+	sudo -i	git clone https://github.com/fatih/vim-go.git ${USER_HOME}/.vim/bundle/vim-go
+
+	# To root user
+	sudo -i mkdir /root/.vim/bundle/neocomplcache.vim
+	sudo -i git clone https://github.com/Shougo/neocomplcache.vim /root/.vim/bundle/neocomplcache.vim
+	sudo -i	git clone https://github.com/fatih/vim-go.git /root/.vim/bundle/vim-go
+
+
+	echo -e "\nvimfiles instalado com sucesso!!\n\n"  
+
+
+fi
