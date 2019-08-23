@@ -46,6 +46,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'kien/ctrlp.vim'
 Plug 'mileszs/ack.vim'
+Plug 'shougo/neocomplete.vim'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -66,6 +67,9 @@ map <F6> :set paste!<CR>
 "" Undo and history
 set history=1000
 set undolevels=1000
+
+"" Neocomplete shougo
+let g:neocomplete#enable_at_startup = 1
 
 "" Vim-Session
 Plug 'xolox/vim-misc'
