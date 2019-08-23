@@ -69,7 +69,10 @@ set history=1000
 set undolevels=1000
 
 "" Neocomplete shougo
+let g:acp_enableAtStartup = 1
 let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+
 
 "" Vim-Session
 Plug 'xolox/vim-misc'
