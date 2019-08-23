@@ -68,10 +68,18 @@ map <F6> :set paste!<CR>
 set history=1000
 set undolevels=1000
 
+" ****************************************************************************************************
 "" Neocomplete shougo
+" ****************************************************************************************************
+
+" Disable AutoComplPop.
 let g:acp_enableAtStartup = 1
+" Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
 let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 
 "" Vim-Session
