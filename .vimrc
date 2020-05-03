@@ -275,7 +275,7 @@ let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 50
+let g:NERDTreeWinSize = 30
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F5> :NERDTreeFind<CR>
 nnoremap <silent> <F5> :NERDTreeToggle<CR>
@@ -410,8 +410,11 @@ let g:UltiSnipsEditSplit="vertical"
 let g:ale_linters = {}
 
 " Tagbar
+
 nmap <silent> <F4> :TagbarToggle<CR>
+
 let g:tagbar_autofocus = 1
+let g:tagbar_width=30
 
 " Disable visualbell
 set noerrorbells visualbell t_vb=
