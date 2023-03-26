@@ -8,8 +8,8 @@ __   ___ _ __ ___ | |_ _| | ___  ___
 
 ```
 
-* **-** http://lobocode.me
-* **-** E-mail: lobocode@gmail.com
+* **http://lobocode.github.io**
+* **E-mail: lobocode@gmail.com**
 
 <img src="https://raw.githubusercontent.com/lobocode/vimfiles/master/myvim.png" />
 </p>
@@ -17,30 +17,27 @@ __   ___ _ __ ___ | |_ _| | ___  ___
 # Plugins pack #
 
 
-* NerdTree
-* Commentary
-* Fugitive
-* airline
-* githutter
-* grep
-* CSApprox
-* tagbar
-* ale
-* indent line
-* bootstrap-updater
-* polyglot
-* rhubarb
-* ctrlp
-* ack
-* theme gruvbox
-
+* NERDTree - File explorer
+* Commentary - Commenting
+* Fugitive - Git
+* airline - Status bar
+* githutter - Git gutter
+* grep - Grep
+* CSApprox - Color scheme
+* tagbar - Tagbar (ctags)
+* ale - Asynchronous Lint Engine
+* indent line - Indent line (for python)
+* bootstrap-updater - Bootstrap updater
+* polyglot - Syntax highlight
+* rhubarb - Github pull request
+* ctrlp - Fuzzy file, buffer, mru, tag, etc finder
+* ack - Ack (grep)
+* theme gruvbox - Theme gruvbox (dark)
 
 ### How to install
 ```bash
 $ git clone https://github.com/lobocode/vimfiles
-$ cp vimfiles/.vimrc ~/
-
-# Execute vim or neovim
-$ vim
+$ cd vimfiles
+$ ./install.sh
 ```
 
